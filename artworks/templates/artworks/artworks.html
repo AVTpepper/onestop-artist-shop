@@ -1,0 +1,113 @@
+{% extends "base.html" %} {% block content %}
+<div class="col">{{ categories }}</div>
+<div class="container">
+  <!-- Category Section -->
+  <div class="row my-5">
+    {% for category in categories %}
+    <div class="col-md-4 col-sm-6 col-12 mb-4">
+      <a href="#" class="category-link" data-category="{{ category.id }}">
+        <div class="card bg-dark text-white">
+          {% if category.image %}
+          <img
+            src="{{ category.image.url }}"
+            class="card-img-top"
+            alt="{{ category.name }}"
+          />
+          {% else %}
+          <img
+            src="/media/default_categories_image.png"
+            class="card-img-top"
+            alt="{{ category.name }}"
+          />
+          {% endif %}
+
+          <div class="card-img-overlay d-flex align-items-center">
+            <h5 class="card-title text-center w-100">{{ category.name }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+    <button class="btn btn-primary mb-4" id="show-all-button">Show All Artworks</button>
+  </div>
+  <h2 class="my-4" id="artworks-heading">Artwork</h2>
+  <!-- Artworks Section -->
+  <div class="row">
+    {% for artwork in artworks %}
+    <div
+      class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 artwork"
+      data-category="{{ artwork.category.id }}"
+    >
+      <div class="card">
+        {% if artwork.image %}
+        <img
+          src="{{ artwork.image.url }}"
+          class="card-img-top"
+          alt="{{ artwork.title }}"
+        />
+        {% else %}
+        <!-- You can provide a default image or a placeholder here -->
+        <img
+          src="/media/default_artwork_image.png"
+          class="card-img-top"
+          alt="{{ artwork.title }}"
+        />
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ artwork.name }}</h5>
+          {% if artwork.dimension %}
+          <p class="card-text">Dimensions: {{ artwork.dimension }}</p>
+          {% endif %}
+          <p class="card-text">Price: {{ artwork.price }}</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <a href="#" class="btn btn-secondary">Show Details</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %} 
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    console.log("the document is ready");
+
+    $('.row.my-5').on('click', 'a.category-link', function(e) {
+        e.preventDefault();
+        console.log("category-link clicked");
+        var selectedCategoryId = $(this).data("category");
+        var selectedCategoryName = $(this).find('.card-title').text();
+        console.log("selectedCategoryId:", selectedCategoryId);
+
+        // Show artworks of the selected category
+        $(".artwork").hide();
+        $('.artwork[data-category="' + selectedCategoryId + '"]').show();
+
+        // Remove the greyed-out effect from the clicked category
+        $(this).closest('.col-md-4').removeClass('greyed-out');
+
+        // Add the greyed-out effect to other categories
+        $('.category-link').closest('.col-md-4').not($(this).closest('.col-md-4')).addClass('greyed-out');
+
+        // Update the heading text
+        $('#artworks-heading').text(selectedCategoryName);
+
+        // Show the "Show All" button
+        $('#show-all-button').show();
+    });
+
+    // Show all products when the "Show All" button is clicked
+    $('#show-all-button').on('click', function() {
+        $(".artwork").show();
+        $('.category-link').closest('.col-md-4').removeClass('greyed-out');
+        $('#artworks-heading').text('Artwork');
+        $(this).hide();
+    });
+});
+
+</script>
+{% endblock %}

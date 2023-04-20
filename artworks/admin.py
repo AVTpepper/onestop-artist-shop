@@ -22,5 +22,5 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Artwork, ProductAdmin)
+admin.site.register(Artwork, ArtworkAdmin)
 admin.site.register(Category, CategoryAdmin)
