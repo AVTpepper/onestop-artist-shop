@@ -4,9 +4,7 @@ from .models import Artwork, Category
 # Register your models here.
 
 
-
-
-class ProductAdmin(admin.ModelAdmin):
+class ArtworkAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
