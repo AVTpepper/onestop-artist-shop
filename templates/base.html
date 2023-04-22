@@ -43,7 +43,7 @@
 
     <nav class="navbar navbar-expand-lg">
         
-            <a class="navbar-brand" href="#">OneStop, Artist Shop!
+            <a class="navbar-brand" href="{% url 'home' %}">OneStop, Artist Shop!
                 
             </a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -52,11 +52,13 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
-                    </li>
+                    {% if request.path != '/' %}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        </li>
+                    {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="{% url 'artworks' %}">Artworks</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown"
@@ -70,7 +72,7 @@
                         </div>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shopping Cart</a>
+                        <a class="nav-link" href="{% url 'shopping_cart' %}">Shopping Cart</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blog</a>
