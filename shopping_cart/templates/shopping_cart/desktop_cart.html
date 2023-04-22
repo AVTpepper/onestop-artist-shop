@@ -1,0 +1,14 @@
+{% load cart_tools %}
+<tr>
+    <td>
+      {% if item.artwork.image %}
+        <img src="{{ item.artwork.image.url }}" alt="{{ item.artwork.name }}" class="cart-item-image-desktop" />
+      {% else %}
+        <img src="/media/default_artwork_image.png" alt="{{ item.artwork.name }}" class="cart-item-image-desktop" />
+      {% endif %}
+      <div>{{ item.artwork.name }}</div>
+    </td>
+    <td>${{ item.artwork.price }}</td>
+    <td>{{ item.quantity }}</td>
+    <td>${{ item.artwork.price|multiply:item.quantity }}</td>
+  </tr>

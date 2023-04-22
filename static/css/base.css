@@ -100,3 +100,25 @@ nav i {
 .greyed-out {
     opacity: 0.5;
 }
+
+/* Shopping cart images */
+/* Mobile view */
+.cart-item-image-mobile {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+  
+  /* Desktop view */
+  .cart-item-image-desktop {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  
+  /* Custom breakpoint */
+  @media (min-width: 992px) {
+    .cart-item-image-desktop {
+      max-width: 250px;
+    }
+  }
