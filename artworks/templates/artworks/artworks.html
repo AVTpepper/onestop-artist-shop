@@ -6,7 +6,7 @@
     {% for category in categories %}
     <div class="col-md-4 col-sm-6 col-12 mb-4">
       <a href="#" class="category-link" data-category="{{ category.id }}">
-        <div class="card bg-dark text-white">
+        <div class="card">
           {% if category.image %}
           <img
             src="{{ category.image.url }}"
@@ -46,7 +46,7 @@
           alt="{{ artwork.title }}"
         />
         {% else %}
-        <!-- You can provide a default image or a placeholder here -->
+        <!-- default image  -->
         <img
           src="/media/default_artwork_image.png"
           class="card-img-top"
@@ -60,7 +60,7 @@
           {% endif %}
           <p class="card-text">Price: {{ artwork.price }}</p>
           <a href="#" class="btn btn-primary">Add to Cart</a>
-          <a href="#" class="btn btn-secondary">Show Details</a>
+          <a href="{% url 'artwork_detail' artwork_id=artwork.pk %}" class="btn btn-info">Show Details</a>
         </div>
       </div>
     </div>
