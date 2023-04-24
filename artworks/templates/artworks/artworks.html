@@ -59,7 +59,7 @@
           <p class="card-text">Dimensions: {{ artwork.dimension }}</p>
           {% endif %}
           <p class="card-text">Price: {{ artwork.price }}</p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+          <a href="{% url 'add_to_cart' artwork.id %}" class="btn btn-primary">Add to Cart</a>
           <a href="{% url 'artwork_detail' artwork_id=artwork.pk %}" class="btn btn-info">Show Details</a>
         </div>
       </div>
