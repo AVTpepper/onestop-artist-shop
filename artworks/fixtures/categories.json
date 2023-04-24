@@ -1,0 +1,5 @@
+[{"pk":1,"model":"artworks.category","fields":{"name":"Paintings","friendly_name":"Paintings"}},
+{"pk":2,"model":"artworks.category","fields":{"name":"Sculptures","friendly_name":"Sculptures"}},
+{"pk":3,"model":"artworks.category","fields":{"name":"Photography","friendly_name":"Photography"}},
+{"pk":4,"model":"artworks.category","fields":{"name":"Digital Art","friendly_name":"Digital Art"}},
+{"pk":5,"model":"artworks.category","fields":{"name":"Mixed Media","friendly_name":"Mixed Media"}}]

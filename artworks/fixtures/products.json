@@ -1,0 +1,1502 @@
+[
+    {
+        "pk": 1,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "MATN-3083984107",
+            "name": "Selena",
+            "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            "price": 522.71,
+            "category": 1,
+            "rating": 1.3,
+            "image_url": "http://dummyimage.com/190x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-06-01 23:43:19"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "XNFK-2232218686",
+            "name": "Redemption: For Robbing the Dead",
+            "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+            "price": 569.44,
+            "category": 3,
+            "rating": 4.4,
+            "image_url": "http://dummyimage.com/234x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-06-16 10:11:33"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "PLTM-5996209127",
+            "name": "Chasing Ghosts: Beyond the Arcade ",
+            "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+            "price": 743.4,
+            "category": 5,
+            "rating": 2.2,
+            "image_url": "http://dummyimage.com/155x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-05-20 15:20:13"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "DJYP-3908131603",
+            "name": "Kinjite: Forbidden Subjects",
+            "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+            "price": 219.33,
+            "category": 4,
+            "rating": 3.4,
+            "image_url": "http://dummyimage.com/167x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-05-05 23:43:00"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "BTJB-0406292284",
+            "name": "World Without Thieves, A (Tian xia wu zei)",
+            "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+            "price": 965.36,
+            "category": 1,
+            "rating": 1.5,
+            "image_url": "http://dummyimage.com/212x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-06-23 19:28:20"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ABTK-3419631947",
+            "name": "Evocateur: The Morton Downey Jr. Movie",
+            "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+            "price": 659.88,
+            "category": 5,
+            "rating": 2.4,
+            "image_url": "http://dummyimage.com/154x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-06-25 10:59:47"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "CRNX-9378052632",
+            "name": "Luther the Geek",
+            "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+            "price": 375.54,
+            "category": 4,
+            "rating": 0.1,
+            "image_url": "http://dummyimage.com/104x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-07-03 04:09:52"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "BIWF-1777915789",
+            "name": "Around the Block",
+            "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+            "price": 722.03,
+            "category": 1,
+            "rating": 3.5,
+            "image_url": "http://dummyimage.com/114x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-06-14 09:06:08"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "PYFQ-2501970558",
+            "name": "Slim Carter",
+            "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+            "price": 997.43,
+            "category": 3,
+            "rating": 1.6,
+            "image_url": "http://dummyimage.com/156x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2023-02-06 14:07:26"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "RNLH-8964298499",
+            "name": "The Land Before Time X: The Great Longneck Migration",
+            "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+            "price": 599.62,
+            "category": 3,
+            "rating": 4.2,
+            "image_url": "http://dummyimage.com/153x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-10-30 22:52:03"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "SHSB-1867502219",
+            "name": "Cosmic Monster, The",
+            "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+            "price": 277.0,
+            "category": 3,
+            "rating": 0.3,
+            "image_url": "http://dummyimage.com/122x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-06-24 09:52:13"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "QKVC-9207185046",
+            "name": "X2: X-Men United",
+            "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+            "price": 916.8,
+            "category": 4,
+            "rating": 1.8,
+            "image_url": "http://dummyimage.com/160x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-05-19 23:21:05"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "PBGW-6644468180",
+            "name": "Legacy, The",
+            "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+            "price": 322.74,
+            "category": 4,
+            "rating": 2.8,
+            "image_url": "http://dummyimage.com/156x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-05-08 18:55:54"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "HUOI-2415491573",
+            "name": "Goke, Body Snatcher from Hell (Kyuketsuki Gokemidoro)",
+            "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+            "price": 774.9,
+            "category": 1,
+            "rating": 4.3,
+            "image_url": "http://dummyimage.com/173x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-06-28 07:58:22"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "UQDC-7147777871",
+            "name": "Women on the 6th Floor, The (Les Femmes du 6ème Étage)",
+            "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+            "price": 76.41,
+            "category": 5,
+            "rating": 2.8,
+            "image_url": "http://dummyimage.com/164x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2023-03-03 02:05:49"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZJNK-6029650271",
+            "name": "This Could Be The Night",
+            "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+            "price": 641.49,
+            "category": 4,
+            "rating": 3.3,
+            "image_url": "http://dummyimage.com/156x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-09-21 21:18:46"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "OLUS-2619151376",
+            "name": "William Vincent (Shadows and Lies)",
+            "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            "price": 625.37,
+            "category": 1,
+            "rating": 1.1,
+            "image_url": "http://dummyimage.com/105x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-04-09 03:49:15"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "LJAB-8725556543",
+            "name": "Slackers",
+            "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+            "price": 801.86,
+            "category": 2,
+            "rating": 4.9,
+            "image_url": "http://dummyimage.com/229x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2023-01-26 23:06:37"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "GMDJ-2178141690",
+            "name": "Back to the USSR - takaisin Ryssiin",
+            "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+            "price": 59.14,
+            "category": 4,
+            "rating": 4.8,
+            "image_url": "http://dummyimage.com/250x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2023-01-02 07:35:49"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "NNLW-8958448648",
+            "name": "Cruising",
+            "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+            "price": 563.86,
+            "category": 3,
+            "rating": 3.2,
+            "image_url": "http://dummyimage.com/180x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-07-17 05:03:01"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "TUWW-2946584761",
+            "name": "Rosencrantz and Guildenstern Are Undead",
+            "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+            "price": 430.74,
+            "category": 1,
+            "rating": 3.3,
+            "image_url": "http://dummyimage.com/221x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-11-20 13:58:58"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZZSI-0669723110",
+            "name": "Two Days, One Night (Deux jours, une nuit)",
+            "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+            "price": 655.73,
+            "category": 5,
+            "rating": 4.2,
+            "image_url": "http://dummyimage.com/130x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-07-25 00:39:51"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "UXNZ-1700376157",
+            "name": "Gamera vs. Barugon",
+            "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+            "price": 656.06,
+            "category": 1,
+            "rating": 2.9,
+            "image_url": "http://dummyimage.com/200x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-04-25 01:29:56"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "GIJH-5453780356",
+            "name": "Adrift in Tokyo (Tenten)",
+            "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+            "price": 727.42,
+            "category": 3,
+            "rating": 4.7,
+            "image_url": "http://dummyimage.com/220x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-07-26 23:19:21"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "FWWO-8106526840",
+            "name": "Seconds",
+            "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+            "price": 977.44,
+            "category": 2,
+            "rating": 3.4,
+            "image_url": "http://dummyimage.com/123x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-12-16 23:06:19"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "LKHA-9597519447",
+            "name": "Guy Thing, A",
+            "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+            "price": 50.45,
+            "category": 4,
+            "rating": 0.3,
+            "image_url": "http://dummyimage.com/228x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-11-03 08:53:47"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZQFB-7102112982",
+            "name": "Boys on the Side",
+            "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            "price": 620.49,
+            "category": 4,
+            "rating": 0.7,
+            "image_url": "http://dummyimage.com/238x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-09-15 23:54:58"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "EPEK-7754106880",
+            "name": "LOL",
+            "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+            "price": 455.5,
+            "category": 3,
+            "rating": 2.9,
+            "image_url": "http://dummyimage.com/199x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2023-04-18 09:26:41"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "IWKJ-3970407297",
+            "name": "Väreitä",
+            "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+            "price": 173.74,
+            "category": 1,
+            "rating": 3.2,
+            "image_url": "http://dummyimage.com/223x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-12-04 04:44:40"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "DJFR-4387641152",
+            "name": "Dark Knight, The",
+            "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+            "price": 298.29,
+            "category": 4,
+            "rating": 1.5,
+            "image_url": "http://dummyimage.com/188x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-05-08 11:45:09"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "PBMR-9488549434",
+            "name": "Great Muppet Caper, The",
+            "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+            "price": 83.87,
+            "category": 2,
+            "rating": 3.1,
+            "image_url": "http://dummyimage.com/116x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-10-30 02:06:18"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "VJZN-4425774789",
+            "name": "Kalevala - Uusi aika",
+            "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+            "price": 791.26,
+            "category": 2,
+            "rating": 0.5,
+            "image_url": "http://dummyimage.com/222x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-08-17 19:42:29"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ISDB-6658020642",
+            "name": "James Gandolfini: Tribute to a Friend",
+            "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+            "price": 351.44,
+            "category": 3,
+            "rating": 1.8,
+            "image_url": "http://dummyimage.com/189x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-10-06 17:30:08"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "LFBS-9587431581",
+            "name": "Postman Blues",
+            "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+            "price": 690.23,
+            "category": 3,
+            "rating": 0.6,
+            "image_url": "http://dummyimage.com/146x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-03-16 23:02:02"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "WASD-4418810384",
+            "name": "To Each His Own",
+            "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+            "price": 778.02,
+            "category": 2,
+            "rating": 2.0,
+            "image_url": "http://dummyimage.com/238x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-07-10 02:18:22"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZPNR-8349734499",
+            "name": "Fireworks Wednesday (Chaharshanbe-soori)",
+            "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+            "price": 933.51,
+            "category": 1,
+            "rating": 2.5,
+            "image_url": "http://dummyimage.com/183x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2023-02-21 01:10:06"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "IYUY-4039472722",
+            "name": "Vinyan",
+            "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+            "price": 33.56,
+            "category": 1,
+            "rating": 3.3,
+            "image_url": "http://dummyimage.com/145x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-05-13 20:06:30"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "KPNY-4537734979",
+            "name": "Looking for Cheyenne (Oublier Cheyenne)",
+            "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+            "price": 322.53,
+            "category": 1,
+            "rating": 4.3,
+            "image_url": "http://dummyimage.com/101x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-12-11 14:43:43"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "VGEO-0741675320",
+            "name": "Sword of the Beast (Kedamono no ken)",
+            "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+            "price": 580.85,
+            "category": 1,
+            "rating": 3.6,
+            "image_url": "http://dummyimage.com/173x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-11-20 02:08:36"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "YDSM-5403488228",
+            "name": "Nothing to Lose",
+            "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+            "price": 18.26,
+            "category": 4,
+            "rating": 1.4,
+            "image_url": "http://dummyimage.com/132x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-10-30 04:33:03"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "BYAP-3440188629",
+            "name": "Head Office",
+            "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
+            "price": 861.06,
+            "category": 4,
+            "rating": 0.8,
+            "image_url": "http://dummyimage.com/101x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-12-30 17:57:06"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "CSFW-5426752737",
+            "name": "Transcendent Man",
+            "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+            "price": 955.2,
+            "category": 2,
+            "rating": 1.1,
+            "image_url": "http://dummyimage.com/161x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-12-06 03:53:12"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ASBQ-5913533305",
+            "name": "I-See-You.Com",
+            "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+            "price": 458.35,
+            "category": 3,
+            "rating": 2.0,
+            "image_url": "http://dummyimage.com/238x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-07-17 23:56:26"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "GRDE-6383880185",
+            "name": "Beer League",
+            "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+            "price": 271.58,
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "http://dummyimage.com/194x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-11-01 23:05:36"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "SHJR-0175182144",
+            "name": "Happiness Never Comes Alone (Un bonheur n'arrive jamais seul)",
+            "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+            "price": 628.49,
+            "category": 1,
+            "rating": 4.1,
+            "image_url": "http://dummyimage.com/157x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-03-21 03:20:54"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "MJPH-3441313628",
+            "name": "Christmas at Pee Wee's Playhouse (a.k.a. Pee-Wee's Playhouse Christmas Special)",
+            "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+            "price": 417.14,
+            "category": 2,
+            "rating": 4.9,
+            "image_url": "http://dummyimage.com/246x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2023-03-03 10:21:14"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZMAX-5272292944",
+            "name": "Joe Versus the Volcano",
+            "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+            "price": 772.99,
+            "category": 4,
+            "rating": 2.1,
+            "image_url": "http://dummyimage.com/201x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-05-01 19:11:47"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "JNQH-7600002203",
+            "name": "Madagascar Skin",
+            "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+            "price": 24.14,
+            "category": 1,
+            "rating": 0.9,
+            "image_url": "http://dummyimage.com/170x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-04-02 16:13:12"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZLLN-6736942770",
+            "name": "Yesterday",
+            "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+            "price": 306.6,
+            "category": 4,
+            "rating": 0.8,
+            "image_url": "http://dummyimage.com/226x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-12-06 16:13:23"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "XRXF-6030102168",
+            "name": "Genevieve",
+            "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+            "price": 322.76,
+            "category": 3,
+            "rating": 3.8,
+            "image_url": "http://dummyimage.com/149x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2023-02-15 09:05:40"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "WRSI-8546243797",
+            "name": "Tomie: Unlimited",
+            "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+            "price": 263.1,
+            "category": 5,
+            "rating": 3.2,
+            "image_url": "http://dummyimage.com/178x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-05-21 08:16:45"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "KLGZ-7109571733",
+            "name": "Class Reunion",
+            "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+            "price": 641.05,
+            "category": 3,
+            "rating": 4.3,
+            "image_url": "http://dummyimage.com/145x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-12-20 10:11:21"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "MTCL-4152924695",
+            "name": "Day Watch (Dnevnoy dozor)",
+            "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+            "price": 768.78,
+            "category": 3,
+            "rating": 4.1,
+            "image_url": "http://dummyimage.com/154x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-09-20 00:07:03"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "WVIN-4214216749",
+            "name": "Cane Toads: The Conquest",
+            "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+            "price": 252.84,
+            "category": 4,
+            "rating": 0.3,
+            "image_url": "http://dummyimage.com/167x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2023-03-31 04:35:25"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "YRFU-2553630064",
+            "name": "Serpico",
+            "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+            "price": 536.6,
+            "category": 4,
+            "rating": 2.6,
+            "image_url": "http://dummyimage.com/214x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-06-01 13:03:12"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "FZDM-9668212983",
+            "name": "Bill Hicks: Sane Man",
+            "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+            "price": 807.48,
+            "category": 3,
+            "rating": 2.2,
+            "image_url": "http://dummyimage.com/239x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-09-04 12:45:17"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "MZJF-5484743078",
+            "name": "The Hornet's Nest",
+            "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+            "price": 315.9,
+            "category": 2,
+            "rating": 4.7,
+            "image_url": "http://dummyimage.com/234x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2023-01-04 00:09:13"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "JNIL-0485385943",
+            "name": "Seven Days to Noon",
+            "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+            "price": 201.63,
+            "category": 2,
+            "rating": 1.5,
+            "image_url": "http://dummyimage.com/191x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-08-08 12:47:44"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "WLBZ-4983032401",
+            "name": "Sacrificio: Who Betrayed Che Guevara",
+            "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+            "price": 401.16,
+            "category": 3,
+            "rating": 0.6,
+            "image_url": "http://dummyimage.com/177x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-09-29 22:52:31"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ORRJ-4148950342",
+            "name": "Walker, The",
+            "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+            "price": 750.81,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": "http://dummyimage.com/141x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2023-01-14 10:52:58"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "JPWL-9609889803",
+            "name": "Cheeky (Trasgredire)",
+            "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+            "price": 337.18,
+            "category": 1,
+            "rating": 2.6,
+            "image_url": "http://dummyimage.com/118x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-09-18 02:40:58"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "SKHB-6579676446",
+            "name": "Planes: Fire & Rescue",
+            "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+            "price": 210.98,
+            "category": 4,
+            "rating": 3.8,
+            "image_url": "http://dummyimage.com/222x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-09-09 12:14:19"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "OPRO-7189787800",
+            "name": "Barbarosa",
+            "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+            "price": 355.86,
+            "category": 3,
+            "rating": 3.4,
+            "image_url": "http://dummyimage.com/122x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-04-24 14:55:54"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "XGPG-0413764335",
+            "name": "Titicut Follies",
+            "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+            "price": 30.33,
+            "category": 4,
+            "rating": 3.0,
+            "image_url": "http://dummyimage.com/245x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-09-15 11:29:08"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "PTBK-9707780017",
+            "name": "Pelle Svanslös i Amerikatt",
+            "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
+            "price": 655.37,
+            "category": 3,
+            "rating": 2.5,
+            "image_url": "http://dummyimage.com/176x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-07-05 07:31:20"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "JJRR-7683522032",
+            "name": "King of Ping Pong, The (Ping-pongkingen)",
+            "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+            "price": 44.82,
+            "category": 4,
+            "rating": 4.6,
+            "image_url": "http://dummyimage.com/216x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2023-03-31 11:16:19"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "MMDC-2365824752",
+            "name": "In Old Chicago",
+            "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+            "price": 892.55,
+            "category": 2,
+            "rating": 3.4,
+            "image_url": "http://dummyimage.com/241x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2023-04-13 04:42:19"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "INDJ-1428206233",
+            "name": "Yakuza, The",
+            "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+            "price": 395.43,
+            "category": 2,
+            "rating": 2.6,
+            "image_url": "http://dummyimage.com/127x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-10-01 19:28:28"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "VATQ-1043052362",
+            "name": "Boy in the Striped Pajamas, The (Boy in the Striped Pyjamas, The)",
+            "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+            "price": 352.0,
+            "category": 3,
+            "rating": 2.9,
+            "image_url": "http://dummyimage.com/134x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-08-23 14:50:53"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "MMLX-2524857238",
+            "name": "Mrs. Henderson Presents",
+            "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+            "price": 323.82,
+            "category": 1,
+            "rating": 2.6,
+            "image_url": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-10-26 12:03:04"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "VQCH-8356078617",
+            "name": "Accidental Golfer, The (Den ofrivillige golfaren)",
+            "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+            "price": 482.54,
+            "category": 4,
+            "rating": 4.4,
+            "image_url": "http://dummyimage.com/162x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2023-04-04 12:30:16"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "RNUA-5232409026",
+            "name": "Insider, The",
+            "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+            "price": 151.38,
+            "category": 4,
+            "rating": 4.5,
+            "image_url": "http://dummyimage.com/147x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-09-29 12:01:46"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "BKGG-2650896214",
+            "name": "Saragossa Manuscript, The (Rekopis znaleziony w Saragossie)",
+            "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+            "price": 324.41,
+            "category": 4,
+            "rating": 4.4,
+            "image_url": "http://dummyimage.com/102x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-11-24 11:48:27"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "PWKX-9394625263",
+            "name": "12 Rounds",
+            "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+            "price": 471.52,
+            "category": 2,
+            "rating": 2.2,
+            "image_url": "http://dummyimage.com/154x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-03-09 09:09:25"
+        }
+    },
+    {
+        "pk": 75,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "FOHT-6053362008",
+            "name": "Superbad",
+            "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+            "price": 518.7,
+            "category": 3,
+            "rating": 1.5,
+            "image_url": "http://dummyimage.com/161x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2023-03-02 17:11:57"
+        }
+    },
+    {
+        "pk": 76,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "HMRU-3415559112",
+            "name": "Family Law (Derecho de familia)",
+            "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+            "price": 98.19,
+            "category": 4,
+            "rating": 3.3,
+            "image_url": "http://dummyimage.com/142x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-07-24 12:52:12"
+        }
+    },
+    {
+        "pk": 77,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "EGFY-9356032741",
+            "name": "Mother Lode",
+            "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+            "price": 3.21,
+            "category": 1,
+            "rating": 3.2,
+            "image_url": "http://dummyimage.com/236x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-01-10 07:21:44"
+        }
+    },
+    {
+        "pk": 78,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "HAWZ-1006361757",
+            "name": "Fallen Angels (Duo luo tian shi)",
+            "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+            "price": 239.35,
+            "category": 4,
+            "rating": 2.6,
+            "image_url": "http://dummyimage.com/220x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-10-06 22:43:36"
+        }
+    },
+    {
+        "pk": 79,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "WGHY-1257422694",
+            "name": "Greystoke: The Legend of Tarzan, Lord of the Apes",
+            "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+            "price": 375.31,
+            "category": 1,
+            "rating": 3.8,
+            "image_url": "http://dummyimage.com/130x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-05-28 23:46:57"
+        }
+    },
+    {
+        "pk": 80,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "GDQX-5483817097",
+            "name": "The Robot vs. the Aztec Mummy",
+            "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+            "price": 478.02,
+            "category": 3,
+            "rating": 0.1,
+            "image_url": "http://dummyimage.com/197x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-06-11 08:06:37"
+        }
+    },
+    {
+        "pk": 81,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "MHOR-5006251715",
+            "name": "Deal, The",
+            "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+            "price": 157.05,
+            "category": 5,
+            "rating": 4.1,
+            "image_url": "http://dummyimage.com/154x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-03-23 12:46:17"
+        }
+    },
+    {
+        "pk": 82,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZUFC-5899574704",
+            "name": "Candy",
+            "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+            "price": 632.01,
+            "category": 3,
+            "rating": 1.6,
+            "image_url": "http://dummyimage.com/188x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-06-02 11:28:56"
+        }
+    },
+    {
+        "pk": 83,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "BAYN-4519812328",
+            "name": "Citizen, The",
+            "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+            "price": 8.98,
+            "category": 1,
+            "rating": 1.6,
+            "image_url": "http://dummyimage.com/228x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-02-09 12:23:37"
+        }
+    },
+    {
+        "pk": 84,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "LPZC-7754022252",
+            "name": "Escape Plan",
+            "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+            "price": 179.32,
+            "category": 4,
+            "rating": 3.4,
+            "image_url": "http://dummyimage.com/200x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-12-23 14:56:35"
+        }
+    },
+    {
+        "pk": 85,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "SZAA-7759707804",
+            "name": "House of Small Cubes, The (Tsumiki no ie)",
+            "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+            "price": 778.04,
+            "category": 2,
+            "rating": 1.6,
+            "image_url": "http://dummyimage.com/225x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-11-16 22:24:19"
+        }
+    },
+    {
+        "pk": 86,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "UCHL-6109318618",
+            "name": "Street Fighter",
+            "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+            "price": 960.71,
+            "category": 4,
+            "rating": 2.9,
+            "image_url": "http://dummyimage.com/154x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-09-14 03:09:34"
+        }
+    },
+    {
+        "pk": 87,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "OWNR-9821867355",
+            "name": "Man to Man",
+            "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+            "price": 711.54,
+            "category": 5,
+            "rating": 3.1,
+            "image_url": "http://dummyimage.com/117x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-06-20 11:29:39"
+        }
+    },
+    {
+        "pk": 88,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "TVGI-7844820712",
+            "name": "Jerusalem Countdown",
+            "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+            "price": 489.65,
+            "category": 1,
+            "rating": 4.0,
+            "image_url": "http://dummyimage.com/177x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2022-11-13 05:46:54"
+        }
+    },
+    {
+        "pk": 89,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "LIQE-1765889233",
+            "name": "Me and My Sister",
+            "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+            "price": 102.95,
+            "category": 2,
+            "rating": 3.9,
+            "image_url": "http://dummyimage.com/234x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-05-02 09:57:57"
+        }
+    },
+    {
+        "pk": 90,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "JXLA-2357957783",
+            "name": "Imagine Me & You",
+            "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+            "price": 868.3,
+            "category": 5,
+            "rating": 1.4,
+            "image_url": "http://dummyimage.com/183x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2023-01-19 19:14:33"
+        }
+    },
+    {
+        "pk": 91,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "PEBI-3132727182",
+            "name": "Malibu's Most Wanted",
+            "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+            "price": 699.86,
+            "category": 3,
+            "rating": 4.5,
+            "image_url": "http://dummyimage.com/123x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-12-14 21:37:14"
+        }
+    },
+    {
+        "pk": 92,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ZWEB-0695879708",
+            "name": "Blood Night: The Legend of Mary Hatchet (Blood Night)",
+            "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+            "price": 580.93,
+            "category": 1,
+            "rating": 3.6,
+            "image_url": "http://dummyimage.com/233x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-06-05 16:31:14"
+        }
+    },
+    {
+        "pk": 93,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "VKJK-3589113585",
+            "name": "Assault on Precinct 13",
+            "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+            "price": 692.57,
+            "category": 2,
+            "rating": 3.0,
+            "image_url": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-05-17 10:30:36"
+        }
+    },
+    {
+        "pk": 94,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "JEFB-1146612119",
+            "name": "Shadows and Fog",
+            "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+            "price": 44.41,
+            "category": 3,
+            "rating": 1.5,
+            "image_url": "http://dummyimage.com/140x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2023-02-10 05:28:05"
+        }
+    },
+    {
+        "pk": 95,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "FGFL-0468189189",
+            "name": "Cold Comes the Night",
+            "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+            "price": 784.73,
+            "category": 3,
+            "rating": 2.6,
+            "image_url": "http://dummyimage.com/162x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-11-04 04:39:37"
+        }
+    },
+    {
+        "pk": 96,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "ISWU-9331012704",
+            "name": "Beautiful Person, The (La belle personne)",
+            "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+            "price": 197.95,
+            "category": 1,
+            "rating": 3.4,
+            "image_url": "http://dummyimage.com/175x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2022-06-11 19:50:23"
+        }
+    },
+    {
+        "pk": 97,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "NQWL-1646730358",
+            "name": "Bastards, The (Los bastardos)",
+            "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+            "price": 460.5,
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "http://dummyimage.com/166x100.png/cc0000/ffffff",
+            "image": null,
+            "date_created": "2022-10-27 08:25:28"
+        }
+    },
+    {
+        "pk": 98,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "HQIV-1538897994",
+            "name": "Prefab People, The (Panelkapcsolat)",
+            "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            "price": 735.52,
+            "category": 3,
+            "rating": 4.6,
+            "image_url": "http://dummyimage.com/117x100.png/5fa2dd/ffffff",
+            "image": null,
+            "date_created": "2023-03-01 20:55:02"
+        }
+    },
+    {
+        "pk": 99,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "CXLL-0578037305",
+            "name": "Grand Theft Auto",
+            "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+            "price": 39.56,
+            "category": 1,
+            "rating": 0.9,
+            "image_url": "http://dummyimage.com/247x100.png/dddddd/000000",
+            "image": null,
+            "date_created": "2022-09-23 18:08:18"
+        }
+    },
+    {
+        "pk": 100,
+        "model": "artworks.artwork",
+        "fields": {
+            "sku": "QAMI-3796244428",
+            "name": "Sanshiro Sugata Part Two (Judo Saga II) (Zoku Sugata Sanshirô)",
+            "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+            "price": 863.09,
+            "category": 2,
+            "rating": 2.2,
+            "image_url": "http://dummyimage.com/199x100.png/ff4444/ffffff",
+            "image": null,
+            "date_created": "2023-03-27 17:02:32"
+        }
+    }
+]

@@ -30,6 +30,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-avtpepper-onestop-artist-rmkk28poe3.us2.codeanyapp.com',
+    'localhost',
+    
 ]
 
 SITE_ID = 1
