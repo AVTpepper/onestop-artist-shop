@@ -6,6 +6,11 @@
     --dark-purple: #351e29;
 }
 
+html {
+    height: 100%;
+}
+
+
 /* Navbar */
 .navbar {
     background-color: var(--dark-purple);

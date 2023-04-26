@@ -1,60 +1,71 @@
 {% extends "base.html" %}
 {% load static %}
-{% load cart_tools %}
-
-{% block page_header %}
-<div class="container header-container">
-  <div class="row">
-    <div class="col">
-      <h1>hi</h1>
-    </div>
-  </div>
-</div>
-{% endblock %}
 
 {% block content %}
-<div class="container">
-  <h2>Shopping Cart</h2>
-  <hr />
-  {% if cart_items %}
-    <div class="cart-items">
-      <div class="row">
-        <div class="col">
-          <!-- Mobile view -->
-          <div class="d-block d-md-none">
-            {% for item in cart_items %}
-              {% include "shopping_cart/mobile_cart.html" with item=item %}
-            {% endfor %}
-          </div>
-          <!-- Desktop view -->
-          <div class="d-none d-md-block">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Artwork</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Subtotal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for item in cart_items %}
-                    {% include "shopping_cart/desktop_cart.html" with item=item %}
-                  {% endfor %}
-                </tbody>
-              </table>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="mb-4">Shopping Cart</h2>
+                <hr>
             </div>
-          </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="col">
+                {% if cart_items %}
+                    <!-- For small and extra small screens -->
+                    <div class="d-block d-md-none">
+                        <h6><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
+                        {% include "shopping_cart/checkout_buttons.html" %}
+                        
+                        <p class="text-muted mb-5">A summary of your cart contents is below</p>
+                        <hr>
+                        {% for item in cart_items %}
+                            {% include "shopping_cart/mobile_cart.html" with item=item %}
+                        {% endfor %}
+                    </div>
+
+                    <!-- For medium and large screens -->
+                    <div class="table-responsive rounded d-none d-md-block">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Product Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in cart_items %}
+                                    {% include "shopping_cart/desktop_cart.html" with item=item %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-end">
+                            <div class="mr-2">
+                                <strong>Grand Total:</strong>
+                            </div>
+                            <div>
+                                ${{ grand_total }}
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            {% include "shopping_cart/checkout_buttons.html" %}
+                        </div>
+                        <hr>
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">Your cart is empty.</p>
+                    <a href="#" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
     </div>
-  {% else %}
-    <p>Your cart is empty.</p>
-  {% endif %}
-</div>
 {% endblock %}
-
-
-
-

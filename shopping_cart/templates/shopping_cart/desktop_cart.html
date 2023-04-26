@@ -1,4 +1,5 @@
 {% load cart_tools %}
+
 <tr>
     <td>
       {% if item.artwork.image %}
@@ -9,6 +10,20 @@
       <div>{{ item.artwork.name }}</div>
     </td>
     <td>${{ item.artwork.price }}</td>
-    <td>{{ item.quantity }}</td>
+    <td>
+      <form method="POST" action="{% url 'update_cart' %}">
+        {% csrf_token %}
+        <input type="hidden" name="item_id" value="{{ item.artwork.id }}">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', -1, 'desktop')">-</button>
+        <input type="number" name="quantity" min="1" step="1" value="{{ item.quantity }}" id="quantity-desktop-{{ item.artwork.id }}">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', 1, 'desktop')">+</button>
+        <button type="submit">Update</button>
+      </form>
+      <form method="POST" action="{% url 'delete_cart_item' %}">
+        {% csrf_token %}
+        <input type="hidden" name="item_id" value="{{ item.artwork.id }}">
+        <button type="submit">Delete</button>
+      </form>
+    </td>
     <td>${{ item.artwork.price|multiply:item.quantity }}</td>
   </tr>

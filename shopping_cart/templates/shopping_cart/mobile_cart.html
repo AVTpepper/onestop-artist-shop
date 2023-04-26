@@ -14,8 +14,22 @@
         <strong>Subtotal: </strong>${{ item.artwork.price|multiply:item.quantity }}
       </div>
     </div>
+    
     <div class="col-12 col-sm-6">
-      <!-- Include your quantity form here -->
+      
+      <form method="POST" action="{% url 'update_cart' %}">
+        {% csrf_token %}
+        <input type="hidden" name="item_id" value="{{ item.artwork.id }}">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', -1, 'mobile')">-</button>
+        <input type="number" name="quantity" min="1" step="1" value="{{ item.quantity }}" id="quantity-mobile-{{ item.artwork.id }}">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', 1, 'mobile')">+</button>
+        <button type="submit">Update</button>
+      </form>
+      <form method="POST" action="{% url 'delete_cart_item' %}">
+        {% csrf_token %}
+        <input type="hidden" name="item_id" value="{{ item.artwork.id }}">
+        <button type="submit">Delete</button>
+      </form>
     </div>
   </div>
   <div class="row">
