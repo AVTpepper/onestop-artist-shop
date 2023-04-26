@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     # apps
     'home',
     'artworks',
-    'shopping_cart'
+    'shopping_cart',
+    'checkout',
 ]
 
 MIDDLEWARE = [
