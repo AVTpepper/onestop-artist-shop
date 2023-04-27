@@ -1,92 +1,66 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
-from django.http import HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib import messages
 
-from shopping_cart.forms import AddToCartForm
 from artworks.models import Artwork
-from .models import CartItem
-
 
 def view_shopping_cart(request):
     """ A view that renders the shopping cart contents page """
-
-    cart = request.session.get('cart', {})
-
-    cart_items = []
-    grand_total = 0 
-    for artwork_id, quantity in cart.items():
-        artwork = get_object_or_404(Artwork, id=artwork_id)
-
-        # Check if 'quantity' is a dictionary and extract the actual quantity value
-        if isinstance(quantity, dict) and 'quantity' in quantity:
-            quantity_value = quantity['quantity']
-        else:
-            quantity_value = quantity
-        
-        subtotal = artwork.price * quantity_value
-        grand_total += subtotal  
-
-        cart_items.append({
-            'artwork': artwork,
-            'quantity': quantity_value,
-            'subtotal': subtotal,
-        })
-
-    context = {'cart_items': cart_items, 'grand_total': grand_total} 
-    return render(request, 'shopping_cart/cart.html', context)
-
+    return render(request, 'shopping_cart/cart.html')
 
 def add_to_cart(request, artwork_id):
-    if request.method == "POST":
-        form = AddToCartForm(request.POST)
-        if form.is_valid():
-            artwork_id = form.cleaned_data['artwork_id']
-            quantity = form.cleaned_data['quantity']
-            artwork = get_object_or_404(Artwork, id=artwork_id)
+    """ Add a quantity of the specified artwork to the shopping cart """
+    artwork = get_object_or_404(Artwork, pk=artwork_id)
+    quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
+    cart = request.session.get('shopping_cart', {})
 
-            cart = request.session.get('cart', {})
+    if artwork_id in list(cart.keys()):
+        cart[artwork_id] += quantity
+        messages.success(request, f'Updated {artwork.name} quantity to {cart[artwork_id]}')
+    else:
+        cart[artwork_id] = quantity
+        messages.success(request, f'Added {artwork.name} to your cart')
 
-            if artwork_id in cart:
-                cart[artwork_id]['quantity'] += quantity
-            else:
-                cart[artwork_id] = {'quantity': quantity}
-
-            request.session['cart'] = cart
-
-            return redirect('shopping_cart')
-
-    return redirect('home')
+    request.session['shopping_cart'] = cart
+    return redirect('shopping_cart')
 
 
-def update_cart(request):
-    if request.method == 'POST':
-        item_id = request.POST.get('item_id')
-        quantity = request.POST.get('quantity')
+def adjust_cart(request, artwork_id):
+    """Adjust the quantity of the specified artwork to the specified amount"""
+    artwork = get_object_or_404(Artwork, pk=artwork_id)
+    quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('shopping_cart', {})
+
+    if quantity > 0:
+        cart[artwork_id] = quantity
+        messages.success(request, f'Updated {artwork.name} quantity to {cart[artwork_id]}')
+    else:
+        cart.pop(artwork_id)
+        messages.success(request, f'Removed {artwork.name} from your cart')
+
+    request.session['cart'] = cart
+    return redirect(reverse('shopping_cart'))
+
+def remove_from_cart(request, artwork_id):
+    """Remove the item from the shopping cart"""
+    try:
+        artwork = get_object_or_404(Artwork, pk=artwork_id)
+        cart = request.session.get('shopping_cart', {})
         
-        # Update the cart item quantity directly in the view function
-        cart = request.session.get('cart', {})
-        cart[item_id] = int(quantity)
+        print(f"Cart before removing: {cart}")  # Print the state of the cart
+        print(f"Artwork ID to be removed: {artwork_id}")  # Print the artwork id
 
-        # Save the updated cart to the session
+        if str(artwork_id) in cart:
+            cart.pop(str(artwork_id))
+            messages.success(request, f'Removed {artwork.name} from your cart')
+        else:
+            messages.error(request, f'Artwork {artwork.name} is not in the cart')
+
+        print(f"Cart after removing: {cart}")  # Print the state of the cart after removing the artwork
         request.session['cart'] = cart
         request.session.modified = True
 
-        return redirect('shopping_cart')
-    else:
-        return redirect('shopping_cart')
-
-
-def delete_cart_item(request):
-    if request.method == "POST":
-        item_id = request.POST.get('item_id')
-        
-        # Remove the cart item directly in the view function
-        cart = request.session.get('cart', {})
-        if item_id in cart:
-            del cart[item_id]
-        request.session['cart'] = cart
-        
-        return redirect('shopping_cart')
-    else:
-        return redirect('shopping_cart')
-
-
+    except Exception as e:
+        print(f"Error: {e}")  # Print the exception
+        messages.error(request, f'Error removing item: {e}')
+    return redirect('shopping_cart')  # Redirect back to the shopping cart

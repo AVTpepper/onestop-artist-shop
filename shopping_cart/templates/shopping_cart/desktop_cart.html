@@ -11,17 +11,17 @@
     </td>
     <td>${{ item.artwork.price }}</td>
     <td>
-      <form method="POST" action="{% url 'update_cart' %}">
+      <form method="POST" action="{% url 'adjust_cart' item.artwork.id %}">
         {% csrf_token %}
-        <input type="hidden" name="item_id" value="{{ item.artwork.id }}">
+        <!-- <input type="hidden" name="artwork_id" value="{{ item.artwork.id }}"> -->
         <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', -1, 'desktop')">-</button>
         <input type="number" name="quantity" min="1" step="1" value="{{ item.quantity }}" id="quantity-desktop-{{ item.artwork.id }}">
         <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', 1, 'desktop')">+</button>
         <button type="submit">Update</button>
       </form>
-      <form method="POST" action="{% url 'delete_cart_item' %}">
+      <form method="POST" action="{% url 'remove_from_cart' item.artwork.id %}">
         {% csrf_token %}
-        <input type="hidden" name="item_id" value="{{ item.artwork.id }}">
+        <!-- <input type="hidden" name="artwork_id" value="{{ item.artwork.id }}"> -->
         <button type="submit">Delete</button>
       </form>
     </td>
