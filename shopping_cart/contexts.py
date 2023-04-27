@@ -16,12 +16,14 @@ def shopping_cart_contents(request):
             quantity = item_data
 
         artwork = get_object_or_404(Artwork, pk=item_id)
+        subtotal = quantity * artwork.price
         total += quantity * artwork.price
         artwork_count += quantity
         cart_items.append({
             'item_id': item_id,
             'quantity': quantity,
             'artwork': artwork,
+            'subtotal': subtotal,
         })
 
     grand_total = total

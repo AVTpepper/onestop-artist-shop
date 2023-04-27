@@ -10,8 +10,17 @@ def view_shopping_cart(request):
 def add_to_cart(request, artwork_id):
     """ Add a quantity of the specified artwork to the shopping cart """
     artwork = get_object_or_404(Artwork, pk=artwork_id)
-    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    
+    # Check if quantity is specified in the POST request
+    quantity = request.POST.get('quantity')
+    if quantity is None:
+        # If quantity is not specified, set default quantity to 1
+        quantity = 1
+    else:
+        # Otherwise, convert quantity to an integer
+        quantity = int(quantity)
+
     cart = request.session.get('shopping_cart', {})
 
     if artwork_id in list(cart.keys()):
@@ -38,7 +47,7 @@ def adjust_cart(request, artwork_id):
         cart.pop(artwork_id)
         messages.success(request, f'Removed {artwork.name} from your cart')
 
-    request.session['cart'] = cart
+    request.session['shopping_cart'] = cart
     return redirect(reverse('shopping_cart'))
 
 def remove_from_cart(request, artwork_id):
@@ -57,7 +66,7 @@ def remove_from_cart(request, artwork_id):
             messages.error(request, f'Artwork {artwork.name} is not in the cart')
 
         print(f"Cart after removing: {cart}")  # Print the state of the cart after removing the artwork
-        request.session['cart'] = cart
+        request.session['shopping_cart'] = cart
         request.session.modified = True
 
     except Exception as e:
