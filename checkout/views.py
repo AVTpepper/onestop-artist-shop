@@ -23,7 +23,7 @@ def checkout(request):
             order.save()
             for item in cart['cart_items']:
                 print(item['artwork'])
-                OrderItem.objects.create(
+                OrderLineItem.objects.create(
                     order=order,
                     artwork=item['artwork'],
                     quantity=item['quantity'],
