@@ -2,79 +2,83 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="overlay"></div>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">Thank You</h2>
-            <hr>
-            <p class="text-black">Your order information is below. A confirmation email will be sent to
-                <strong>{{ order.email }}</strong>.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-lg-7">
-            <div class="order-confirmation-wrapper p-2 border">
-                <div class="row">
-                    <div class="col">
-                        <small class="text-muted">Order Info:</small>
-                    </div>
-                </div>
-                <!-- Similar blocks for order number, order date, etc -->
-                {% for artwork in order.artworks.all %}
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <p class="small mb-0 text-black font-weight-bold">
-                            {{ artwork.title }}{% if artwork.size %} - Size {{ artwork.size|upper }}{% endif %}
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-8 text-md-right">
-                        <p class="small mb-0">{{ artwork.quantity }} @ ${{ artwork.price }} each</p>
-                    </div>
-                </div>
-                {% endfor %}
-                <!-- Similar blocks for delivery address details -->
-
-                <div class="row">
-                    <div class="col">
-                        <small class="text-muted">Billing Info:</small>
-                    </div>
-                </div>
-                <!-- Similar blocks for order total, delivery charges, grand total -->
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+                <h2 class="logo-font text-center mt-4">Thank You</h2>
+                <hr>
+                <p class="text-black text-center">Your order information is below. A confirmation email will be sent to
+                    <strong>{{ order.email }}</strong>.</p>
+                <hr>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-lg-7 text-right">
-            {% if from_profile %}
-                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-angle-left"></i>
-                    </span>
-                    <span class="text-uppercase">Back to Profile</span>
-                </a>
-            {% else %}
-                <a href="{% url 'artworks' %}" class="btn btn-black rounded-0 my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-palette"></i>
-                    </span>
-                    <span class="text-uppercase">Now check out the latest artworks!</span>
-                </a>
-            {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="my-2">Order Information</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-3">
+                                <p class="mb-1"><strong>Order Number:</strong></p>
+                                <p>{{ order.order_number }}</p>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <p class="mb-1"><strong>Order Date:</strong></p>
+                                <p>{{ order.date_ordered }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="mb-2">Order Details:</h5>
+                                {% for item in order.lineitems.all %}
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <p class="small mb-0 text-black">
+                                                {{ item.artwork.name }} (Quantity: {{ item.quantity }})
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3 text-md-right">
+                                            <p class="small mb-0">${{ item.artwork.price }} each</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="my-2">Delivery Information</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Full name:</strong> {{ order.full_name }}</p>
+                        <p><strong>Address:</strong> {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order.country }}</p>
+                        <p><strong>Phone Number:</strong> {{ order.phone_number }}</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="my-2">Billing Information</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Order Total:</strong> ${{ order.total }}</p>
+                        <p><strong>Delivery Charges:</strong> $0.00</p> <!-- Replace with actual delivery charges if applicable -->
+                        <p><strong>Grand Total:</strong> ${{ order.total }}</p>  <!-- Replace with actual grand total if applicable -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
