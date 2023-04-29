@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .forms import OrderForm
-from .models import OrderLineItem
+from .models import OrderLineItem, Order
 from shopping_cart.contexts import shopping_cart_contents
 
 
@@ -30,7 +30,7 @@ def checkout(request):
                     lineitem_total=item['subtotal']
                 )
             messages.success(request, 'Order successfully placed!')
-            return redirect('complete_order')
+            return redirect('complete_order', order_id=order.id)
         else:
             messages.error(request, 'There was an error with your form. Please check your information.')
     else:
@@ -39,10 +39,15 @@ def checkout(request):
     context = {
         'cart': cart,
         'form': form,
+        'stripe_public_key': 'pk_test_51MoQbkHAS8S3VMAhLOO3X0ZyEzXXIHMYqWS7FoDKzoSKqYTVwom8AvqamgG6kUkhrFpogAFk1UQCfSR71vfratTz00qa1OoAEK',
+        'client_secret': 'test client secret',
     }
 
     return render(request, 'checkout/checkout.html', context)
 
 
-def complete_order(request):
-    return render(request, 'checkout/complete_order.html')
+def complete_order(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    context = {'order': order}
+    return render(request, 'checkout/complete_order.html', context)
+
