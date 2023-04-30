@@ -11,7 +11,6 @@ from shopping_cart.contexts import shopping_cart_contents
 import stripe
 import json
 
-
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -26,6 +25,11 @@ def checkout(request):
     intent = stripe.PaymentIntent.create(
         amount=stripe_total,
         currency=settings.STRIPE_CURRENCY,
+        metadata={
+            'shopping_cart': json.dumps(request.session.get('shopping_cart', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': str(request.user),
+        }
     )
 
     if request.method == 'POST':
@@ -48,9 +52,8 @@ def checkout(request):
             order.total = total
             order.save()
             for item in current_cart['cart_items']:
-                print(item)
                 try:
-                    artwork = item['artwork']
+                    artwork = Artwork.objects.get(id=item['artwork'].id)  # Make sure the artwork exists in DB
                     quantity = item['quantity']
                     lineitem_total = item['subtotal']
                     order_line_item = OrderLineItem(
@@ -62,7 +65,7 @@ def checkout(request):
                     order_line_item.save()
                 except Artwork.DoesNotExist:
                     messages.error(request, (
-                        "One of the artworks in your bag wasn't found in our database. "
+                        f"The artwork with id {item['artwork'].id} in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -87,28 +90,41 @@ def checkout(request):
     return render(request, 'checkout/checkout.html', context)
 
 
-
-
 def complete_order(request, order_number):
     """
     Handle successful checkouts
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)  # Adjust this according to your user model
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)  # Adjust this according to your user model
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-
     if 'shopping_cart' in request.session:
         del request.session['shopping_cart']
-
 
     template = 'checkout/complete_order.html'
     context = {
         'order': order,
     }
-
 
     return render(request, template, context)
 
@@ -128,3 +144,4 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
