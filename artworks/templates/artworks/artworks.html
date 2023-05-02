@@ -1,4 +1,4 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% block content %}
 <div class="col">{{ categories }}</div>
 <div class="container">
@@ -9,17 +9,9 @@
       <a href="#" class="category-link" data-category="{{ category.id }}">
         <div class="card">
           {% if category.image %}
-          <img
-            src="{{ category.image.url }}"
-            class="card-img-top"
-            alt="{{ category.name }}"
-          />
+          <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}" />
           {% else %}
-          <img
-            src="/media/default_categories_image.png"
-            class="card-img-top"
-            alt="{{ category.name }}"
-          />
+          <img src="/media/default_categories_image.png" class="card-img-top" alt="{{ category.name }}" />
           {% endif %}
 
           <div class="card-img-overlay d-flex align-items-center">
@@ -35,24 +27,13 @@
   <!-- Artworks Section -->
   <div class="row">
     {% for artwork in artworks %}
-    <div
-      class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 artwork"
-      data-category="{{ artwork.category.id }}"
-    >
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 artwork" data-category="{{ artwork.category.id }}">
       <div class="card">
         {% if artwork.image %}
-        <img
-          src="{{ artwork.image.url }}"
-          class="card-img-top"
-          alt="{{ artwork.name }}"
-        />
+        <img src="{{ artwork.image.url }}" class="card-img-top" alt="{{ artwork.name }}" />
         {% else %}
         <!-- default image  -->
-        <img
-          src="/media/default_artwork_image.png"
-          class="card-img-top"
-          alt="{{ artwork.name }}"
-        />
+        <img src="/media/default_artwork_image.png" class="card-img-top" alt="{{ artwork.name }}" />
         {% endif %}
         <div class="card-body">
           <h5 class="card-title">{{ artwork.name }}</h5>
@@ -60,7 +41,11 @@
           <p class="card-text">Dimensions: {{ artwork.dimension }}</p>
           {% endif %}
           <p class="card-text">Price: {{ artwork.price }}</p>
-          <a href="{% url 'add_to_cart' artwork_id=artwork.pk %}" class="btn btn-primary">Add to Cart</a>
+          <form method="POST" action="{% url 'add_to_cart' artwork_id=artwork.pk %}">
+            {% csrf_token %}
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
           <a href="{% url 'artwork_detail' artwork_id=artwork.pk %}" class="btn btn-info">Show Details</a>
         </div>
       </div>
@@ -68,47 +53,47 @@
     {% endfor %}
   </div>
 </div>
-{% endblock %} 
+{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 
 <script type="text/javascript">
-  $(document).ready(function() {
+  $(document).ready(function () {
     console.log("the document is ready");
 
-    $('.row.my-5').on('click', 'a.category-link', function(e) {
-        e.preventDefault();
-        console.log("category-link clicked");
-        var selectedCategoryId = $(this).data("category");
-        var selectedCategoryName = $(this).find('.card-title').text();
-        console.log("selectedCategoryId:", selectedCategoryId);
+    $('.row.my-5').on('click', 'a.category-link', function (e) {
+      e.preventDefault();
+      console.log("category-link clicked");
+      var selectedCategoryId = $(this).data("category");
+      var selectedCategoryName = $(this).find('.card-title').text();
+      console.log("selectedCategoryId:", selectedCategoryId);
 
-        // Show artworks of the selected category
-        $(".artwork").hide();
-        $('.artwork[data-category="' + selectedCategoryId + '"]').show();
+      // Show artworks of the selected category
+      $(".artwork").hide();
+      $('.artwork[data-category="' + selectedCategoryId + '"]').show();
 
-        // Remove the greyed-out effect from the clicked category
-        $(this).closest('.col-md-4').removeClass('greyed-out');
+      // Remove the greyed-out effect from the clicked category
+      $(this).closest('.col-md-4').removeClass('greyed-out');
 
-        // Add the greyed-out effect to other categories
-        $('.category-link').closest('.col-md-4').not($(this).closest('.col-md-4')).addClass('greyed-out');
+      // Add the greyed-out effect to other categories
+      $('.category-link').closest('.col-md-4').not($(this).closest('.col-md-4')).addClass('greyed-out');
 
-        // Update the heading text
-        $('#artworks-heading').text(selectedCategoryName);
+      // Update the heading text
+      $('#artworks-heading').text(selectedCategoryName);
 
-        // Show the "Show All" button
-        $('#show-all-button').show();
+      // Show the "Show All" button
+      $('#show-all-button').show();
     });
 
     // Show all products when the "Show All" button is clicked
-    $('#show-all-button').on('click', function() {
-        $(".artwork").show();
-        $('.category-link').closest('.col-md-4').removeClass('greyed-out');
-        $('#artworks-heading').text('Artwork');
-        $(this).hide();
+    $('#show-all-button').on('click', function () {
+      $(".artwork").show();
+      $('.category-link').closest('.col-md-4').removeClass('greyed-out');
+      $('#artworks-heading').text('Artwork');
+      $(this).hide();
     });
-});
+  });
 
 </script>
 {% endblock %}
