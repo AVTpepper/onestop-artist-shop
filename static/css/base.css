@@ -10,7 +10,26 @@ html {
     height: 100%;
 }
 
+/* messages */
+#messages {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 9999; /* To ensure it appears above all other content */
+    pointer-events: none; /* To not interfere with clicks on underlying content */
+}
 
+#messages .alert {
+    pointer-events: auto; /* To allow interacting with the alert (for closing it, for example) */
+}
+.spinner-border {
+    animation: spinner-border 9s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spinner-border {
+    to { transform: rotate(360deg); }
+}
 /* Navbar */
 .navbar {
     background-color: var(--dark-purple);
