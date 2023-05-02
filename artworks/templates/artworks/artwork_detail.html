@@ -25,6 +25,7 @@
             <form method="POST" action="{% url 'add_to_cart' artwork.id %}">
                 {% csrf_token %}
                 {{ form }}
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 <button type="submit" class="btn btn-primary">Add to Cart</button>
             </form>
             <a href="{% url 'artworks' %}" class="btn btn-secondary">Back to All Artworks</a>
