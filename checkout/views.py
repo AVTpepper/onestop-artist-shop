@@ -7,6 +7,8 @@ from .forms import OrderForm
 from .models import OrderLineItem, Order
 from artworks.models import Artwork
 from shopping_cart.contexts import shopping_cart_contents
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 
 import stripe
 import json
