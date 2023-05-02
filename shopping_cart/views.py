@@ -23,15 +23,17 @@ def add_to_cart(request, artwork_id):
 
     cart = request.session.get('shopping_cart', {})
 
-    if artwork_id in list(cart.keys()):
-        cart[artwork_id] += quantity
-        messages.success(request, f'Updated {artwork.name} quantity to {cart[artwork_id]}')
+    # Convert artwork_id to a string before comparing or storing it
+    artwork_id_str = str(artwork_id)
+
+    if artwork_id_str in list(cart.keys()):
+        messages.info(request, f'{artwork.name} is already in your cart')
     else:
-        cart[artwork_id] = quantity
+        cart[artwork_id_str] = quantity
         messages.success(request, f'Added {artwork.name} to your cart')
 
     request.session['shopping_cart'] = cart
-    return redirect('shopping_cart')
+    return redirect(redirect_url)
 
 
 def adjust_cart(request, artwork_id):
