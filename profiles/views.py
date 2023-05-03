@@ -23,6 +23,10 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
+    print("Orders: ", orders)
+    for order in orders:
+        print("Order number: ", order.order_number)
+        print("Line items: ", order.lineitems.all())
     template = 'profiles/profile.html'
     context = {
         'form': form,
@@ -33,15 +37,23 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
-    order = get_object_or_404(Order, order_number=order_number)
+    profile = get_object_or_404(UserProfile, user=request.user)
+    order = Order.objects.get(order_number=order_number)
+    
+    if profile != order.user_profile:
+        messages.error(request, (
+            'This order does not belong to you.'
+        ))
+        return redirect(reverse('profile'))
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
     ))
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/complete_order.html'
     context = {
         'order': order,
         'from_profile': True,
