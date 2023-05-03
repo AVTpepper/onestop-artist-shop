@@ -1,0 +1,57 @@
+/* MailChimp */
+#mc_embed_signup {
+    clear: left;
+    font: 14px;
+    background: var(--white-smoke);
+    border: 2px solid var(--atomic-tangerine);
+    border-radius: 10px;
+}
+
+.mc-field-group {
+    width: fit-content;
+}
+
+#mc_embed_signup {
+    max-width: 100%;
+}
+
+input#mc-embed-subscribe.button {
+    color: green;
+    background-color: none;
+    border: 1px solid green;
+}
+
+/* Hero Image */
+.hero-image {
+    background-image: url(/media/hero-image.jpg);
+    background-size: cover;
+    height: calc(100vh - 100px);
+}
+
+.text-background {
+    background: rgba(245, 245, 245, 0.5);
+    border-radius: 40px;
+    width: fit-content;
+    margin: auto;
+    border: 2px solid var(--dark-purple);
+}
+
+.lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1.5%;
+}
+
+.shop-now-btn, .show-more-btn {
+    margin-bottom: 1%;
+    border-radius: 40px;
+    background: var(--dark-purple);
+    border: 3px solid var(--atomic-tangerine);
+    color: var(--white-smoke);
+}
+
+.shop-now-btn:hover, .show-more-btn:hover {
+    color: var(--atomic-tangerine);
+    background: var(--dark-purple);
+    border-color: var(--atomic-tangerine);
+}
