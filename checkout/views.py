@@ -17,6 +17,8 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    profile = UserProfile.objects.filter(user=request.user).first()
+
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
 
@@ -79,7 +81,22 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. Please check your information.')
     else:
-        form = OrderForm()
+        # If this is a GET request, pre-fill the form with the user's default delivery info
+        if profile:
+            initial_data = {
+                'full_name': profile.user.get_full_name(),
+                'email': profile.user.email,
+                'phone_number': profile.default_phone_number,
+                'country': profile.default_country,
+                'postcode': profile.default_postcode,
+                'town_or_city': profile.default_town_or_city,
+                'street_address1': profile.default_street_address1,
+                'street_address2': profile.default_street_address2,
+                'county': profile.default_county,
+            }
+        else:
+            initial_data = {}
+        form = OrderForm(initial=initial_data)
 
     context = {
         'cart': current_cart,
@@ -115,6 +132,9 @@ def complete_order(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)  # Adjust this according to your user model
             if user_profile_form.is_valid():
                 user_profile_form.save()
+        
+        order.user_profile = profile
+        order.save()
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
