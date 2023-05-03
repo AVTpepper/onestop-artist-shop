@@ -7,10 +7,17 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='posts/', default='default.png')
+    image = models.ImageField(upload_to='posts/', default='posts/default.png')
 
     def __str__(self):
         return self.title
+    
+    def likes_count(self):
+        return self.likes.count()
+
+    def comments_count(self):
+        return self.comments.count()
+
 
 class Comment(models.Model):
     content = models.TextField()
@@ -21,6 +28,10 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.content[:50]
+    
+    def is_author(self, user):
+        return self.author == user
+
 
 class Like(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
