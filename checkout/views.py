@@ -17,7 +17,10 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    profile = UserProfile.objects.filter(user=request.user).first()
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.filter(user=request.user).first()
+    else:
+        profile = None
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
