@@ -63,7 +63,9 @@ def add_comment(request, pk):
     return render(request, 'blog/add_comment.html', context)
 
 
+@login_required
 def post_create(request):
+    # check if user is not superuser raise the 404 error.
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
@@ -94,7 +96,7 @@ def like_post(request, post_id):
 
 @login_required
 def comment_edit(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
+    comment = get_object_or_404(Comment, pk=pk, author=request.user)
     post_pk = comment.post.pk
 
     if request.method == 'POST':
@@ -114,7 +116,7 @@ def comment_edit(request, pk):
 
 @login_required
 def comment_delete(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
+    comment = get_object_or_404(Comment, pk=pk, author=request.user)
     post_pk = comment.post.pk
 
     if request.method == 'POST':
