@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
 from .models import Artwork, Category
-
 from shopping_cart.forms import AddToCartForm
 
 
@@ -12,11 +11,11 @@ def all_artworks(request):
     """ A view to show all products, including sorting and search queries """
 
     artworks = Artwork.objects.all()
-    category = Category.objects.all()
+    categories = Category.objects.all()
 
     context = {
         'artworks': artworks,
-        'categories': category,
+        'categories': categories,
     }
 
     return render(request, 'artworks/artworks.html', context)
