@@ -1,29 +1,35 @@
 {% load cart_tools %}
 
 <tr>
-    <td>
-      {% if item.artwork.image %}
-        <img src="{{ item.artwork.image.url }}" alt="{{ item.artwork.name }}" class="cart-item-image-desktop" />
-      {% else %}
-        <img src="/media/default_artwork_image.png" alt="{{ item.artwork.name }}" class="cart-item-image-desktop" />
-      {% endif %}
-      <div>{{ item.artwork.name }}</div>
-    </td>
-    <td>${{ item.artwork.price }}</td>
-    <td>
-      <form method="POST" action="{% url 'adjust_cart' item.artwork.id %}">
-        {% csrf_token %}
-        <!-- <input type="hidden" name="artwork_id" value="{{ item.artwork.id }}"> -->
-        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', -1, 'desktop')">-</button>
-        <input type="number" name="quantity" min="1" step="1" value="{{ item.quantity }}" id="quantity-desktop-{{ item.artwork.id }}">
-        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', 1, 'desktop')">+</button>
-        <button type="submit">Update</button>
-      </form>
-      <form method="POST" action="{% url 'remove_from_cart' item.artwork.id %}">
-        {% csrf_token %}
-        <!-- <input type="hidden" name="artwork_id" value="{{ item.artwork.id }}"> -->
-        <button type="submit">Delete</button>
-      </form>
-    </td>
-    <td>${{ item.artwork.price|multiply:item.quantity }}</td>
-  </tr>
+  <td>
+    {% if item.artwork.image %}
+    <img src="{{ item.artwork.image.url }}" alt="{{ item.artwork.name }}"
+      class="cart-item-image-desktop larger-image" />>
+    {% else %}
+    <img src="/media/default_artwork_image.png" alt="{{ item.artwork.name }}"
+      class="cart-item-image-desktop larger-image" />
+    {% endif %}
+    <div>{{ item.artwork.name }}</div>
+  </td>
+  <td>${{ item.artwork.price }}</td>
+  <td>
+    <form method="POST" action="{% url 'adjust_cart' item.artwork.id %}" class="d-inline">
+      {% csrf_token %}
+      <div class="btn-group" role="group">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', -1, 'desktop')"
+          class="btn btn-outline-secondary btn-sm">-</button>
+        <input type="number" name="quantity" min="1" step="1" value="{{ item.quantity }}"
+          id="quantity-desktop-{{ item.artwork.id }}" class="form-control-sm text-center" style="width: 60px;">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', 1, 'desktop')"
+          class="btn btn-outline-secondary btn-sm">+</button>
+      
+      <button type="submit" class="btn btn-primary btn-sm ml-2">Update</button>
+    </form>
+    <form method="POST" action="{% url 'remove_from_cart' item.artwork.id %}" class="d-inline">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger btn-sm ml-2">Delete</button>
+    </form>
+  </div>
+  </td>
+  <td>${{ item.artwork.price|multiply:item.quantity }}</td>
+</tr>
