@@ -1,0 +1,41 @@
+.cart-item-image-desktop {
+    width: 75px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.cart-item-image-mobile {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.fieldset-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-outline-black {
+    border-color: #333;
+    color: #333;
+}
+
+.btn-outline-black:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-black {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-black:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.larger-image {
+    width: 400px;
+}
