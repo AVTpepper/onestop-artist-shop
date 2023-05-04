@@ -4,30 +4,24 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
 {% endblock %}
 
 {% block content %}
-<div class="overlay" id="loading-overlay"></div>
 <div class="container">
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Checkout</h2>
+            <h2 class=" mb-4">Checkout</h2>
             <hr>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary ({{ shopping_cart|length }})</p>
+            <p class="text-muted">Order Summary</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -116,14 +110,14 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
-                <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'shopping_cart' %}" class="btn btn-outline-black rounded-0">
+                <div class="submit-button text-right mt-3 mb-2">
+                    <a href="{% url 'shopping_cart' %}" class="btn btn-outline-black btn-secondary rounded-0">
                         <span class="icon text-white-50">
                             <i class="fas fa-arrow-left"></i>
                         </span>
                         <span class="text">Back to Shopping Cart</span>
                     </a>
-                    <button class="btn btn-black rounded-0" type="submit" id="submit-button">
+                    <button class="btn  btn-success rounded-0" type="submit" id="submit-button">
                         <span class="icon text-white-50">
                             <i class="fas fa-check"></i>
                         </span>
@@ -135,7 +129,7 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <h1 class="loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
