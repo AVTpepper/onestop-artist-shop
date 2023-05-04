@@ -1,99 +1,129 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'artworks/css/artworks.css' %}">
+{% endblock %}
+
+
 {% block content %}
-<div class="col">{{ categories }}</div>
 <div class="container">
   <!-- Category Section -->
   <div class="row my-5">
     {% for category in categories %}
     <div class="col-md-4 col-sm-6 col-12 mb-4">
-      <a href="#" class="category-link" data-category="{{ category.id }}">
-        <div class="card">
-          {% if category.image %}
-          <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}" />
-          {% else %}
-          <img src="/media/default_categories_image.png" class="card-img-top" alt="{{ category.name }}" />
-          {% endif %}
+      <a href="?category={{ category.id }}" class="category-link" data-category="{{ category.id }}">
+        <div class="card h-100">
+          <div class="card-image-wrapper">
+            {% if category.image %}
+            <div class="category-image" style="background-image: url('{{ category.image.url }}');"></div>
+            {% else %}
+            <div class="category-image" style="background-image: url('/media/default_categories_image.png');"></div>
+            {% endif %}
+          </div>
 
           <div class="card-img-overlay d-flex align-items-center">
-            <h5 class="card-title text-center w-100">{{ category.name }}</h5>
+            <h5 class="text-background card-title text-center w-100">{{ category.name }}</h5>
           </div>
         </div>
       </a>
     </div>
     {% endfor %}
-    <button class="btn btn-primary mb-4" id="show-all-button">Show All Artworks</button>
+    <div class="col-md-4 col-sm-6 col-12 mb-4 all-artworks-btn">
+      <a href="{% url 'artworks' %}" class="btn" id="show-all-button">Show All Artworks</a>
+    </div>
   </div>
+  <!-- </div> -->
+  <!-- <div class="colored">
+  <div class="container"> -->
   <h2 class="my-4" id="artworks-heading">Artwork</h2>
   <!-- Artworks Section -->
   <div class="row">
     {% for artwork in artworks %}
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 artwork" data-category="{{ artwork.category.id }}">
       <div class="card">
-        {% if artwork.image %}
-        <img src="{{ artwork.image.url }}" class="card-img-top" alt="{{ artwork.name }}" />
-        {% else %}
-        <!-- default image  -->
-        <img src="/media/default_artwork_image.png" class="card-img-top" alt="{{ artwork.name }}" />
-        {% endif %}
-        <div class="card-body">
-          <h5 class="card-title">{{ artwork.name }}</h5>
-          {% if artwork.dimension %}
-          <p class="card-text">Dimensions: {{ artwork.dimension }}</p>
+        <div class="card-image-wrapper">
+          {% if artwork.image %}
+          <img src="{{ artwork.image.url }}" class="card-img-top" alt="{{ artwork.name }}" />
+          {% else %}
+          <!-- default image  -->
+          <img src="/media/noimage.png" class="card-img-top" alt="{{ artwork.name }}" />
           {% endif %}
-          <p class="card-text">Price: {{ artwork.price }}</p>
-          <form method="POST" action="{% url 'add_to_cart' artwork_id=artwork.pk %}">
-            {% csrf_token %}
-            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            <button type="submit" class="btn btn-primary">Add to Cart</button>
-        </form>
-          <a href="{% url 'artwork_detail' artwork_id=artwork.pk %}" class="btn btn-info">Show Details</a>
+        </div>
+        <div class="card-body">
+          <!-- <p class="card-text text-muted number-font">Dimensions in cm: {{ artwork.width|floatformat:0 }} x 
+            {{ artwork.length|floatformat:0 }}{% if artwork.height %} x {{ artwork.height|floatformat:0 }}{% endif %}</p> -->
+          <h5 class="card-title">{{ artwork.name }}</h5>
+
+          <!-- Add ratings -->
+          <p class="card-text number-font"><span class="star-icon">&#11088;</span> Rating: {{ artwork.rating|floatformat:1 }}/5</p>
+
+          <!-- Add dimensions -->
+
+
+
+          <p class="card-text number-font"><span class="price-tag-icon">&#128176;</span> Price: ${{ artwork.price|floatformat:2 }}</p>
+          <div class="card-button-row">
+            <form method="POST" action="{% url 'add_to_cart' artwork_id=artwork.pk %}">
+              {% csrf_token %}
+              <input type="hidden" name="redirect_url" value="{{ request.path }}">
+              <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </form>
+            <a href="{% url 'artwork_detail' artwork_id=artwork.pk %}" class="btn btn-info">Show Details</a>
+          </div>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
+  <!-- Pagination -->
+  <div class="text-center">
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        {% if artworks.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?{% if category_id %}category={{ category_id }}&{% endif %}page=1"
+            aria-label="First">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link"
+            href="?{% if category_id %}category={{ category_id }}&{% endif %}page={{ artworks.previous_page_number }}">Previous</a>
+        </li>
+        {% endif %}
+
+        {% for i in artworks.paginator.page_range %}
+        {% if artworks.number == i %}
+        <li class="page-item active"><a class="page-link"
+            href="?{% if category_id %}category={{ category_id }}&{% endif %}page={{ i }}">{{ i }}</a></li>
+        {% else %}
+        <li class="page-item"><a class="page-link"
+            href="?{% if category_id %}category={{ category_id }}&{% endif %}page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+
+        {% if artworks.has_next %}
+        <li class="page-item">
+          <a class="page-link"
+            href="?{% if category_id %}category={{ category_id }}&{% endif %}page={{ artworks.next_page_number }}">Next</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link"
+            href="?{% if category_id %}category={{ category_id }}&{% endif %}page={{ artworks.paginator.num_pages }}"
+            aria-label="Last">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>
 </div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
-
-<script type="text/javascript">
-  $(document).ready(function () {
-    console.log("the document is ready");
-
-    $('.row.my-5').on('click', 'a.category-link', function (e) {
-      e.preventDefault();
-      console.log("category-link clicked");
-      var selectedCategoryId = $(this).data("category");
-      var selectedCategoryName = $(this).find('.card-title').text();
-      console.log("selectedCategoryId:", selectedCategoryId);
-
-      // Show artworks of the selected category
-      $(".artwork").hide();
-      $('.artwork[data-category="' + selectedCategoryId + '"]').show();
-
-      // Remove the greyed-out effect from the clicked category
-      $(this).closest('.col-md-4').removeClass('greyed-out');
-
-      // Add the greyed-out effect to other categories
-      $('.category-link').closest('.col-md-4').not($(this).closest('.col-md-4')).addClass('greyed-out');
-
-      // Update the heading text
-      $('#artworks-heading').text(selectedCategoryName);
-
-      // Show the "Show All" button
-      $('#show-all-button').show();
-    });
-
-    // Show all products when the "Show All" button is clicked
-    $('#show-all-button').on('click', function () {
-      $(".artwork").show();
-      $('.category-link').closest('.col-md-4').removeClass('greyed-out');
-      $('#artworks-heading').text('Artwork');
-      $(this).hide();
-    });
-  });
-
-</script>
+<script src="{% static 'artworks/js/artworks.js' %}"></script>
 {% endblock %}
