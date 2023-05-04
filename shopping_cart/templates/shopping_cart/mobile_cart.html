@@ -1,37 +1,42 @@
 {% load cart_tools %}
 <div class="row">
-    <div class="col-12 col-sm-6 mb-2">
-      {% if item.artwork.image %}
-        <img src="{{ item.artwork.image.url }}" alt="{{ item.artwork.name }}" class="cart-item-image-mobile" />
-      {% else %}
-        <img src="/media/default_artwork_image.png" alt="{{ item.artwork.name }}" class="cart-item-image-mobile" />
-      {% endif %}
-    </div>
-    <div class="col-12 col-sm-6 mb-2">
-      <div>{{ item.artwork.name }}</div>
-      <div>Price Each: ${{ item.artwork.price }}</div>
-      <div>
-        <strong>Subtotal: </strong>${{ item.artwork.price|multiply:item.quantity }}
-      </div>
-    </div>
-    
-    <div class="col-12 col-sm-6">
-      
-      <form method="POST" action="{% url 'adjust_cart' item.artwork.id %}">
-        {% csrf_token %}
-        <!-- <input type="hidden" name="artwork_id" value="{{ item.artwork.id }}"> -->
-        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', -1, 'mobile')">-</button>
-        <input type="number" name="quantity" min="1" step="1" value="{{ item.quantity }}" id="quantity-mobile-{{ item.artwork.id }}">
-        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', 1, 'mobile')">+</button>
-        <button type="submit">Update</button>
-      </form>
-      <form method="POST" action="{% url 'remove_from_cart' item.artwork.id %}">>
-        {% csrf_token %}
-        <!-- <input type="hidden" name="artwork_id" value="{{ item.artwork.id }}"> -->
-        <button type="submit">Delete</button>
-      </form>
+  <div class="col-12 col-sm-6 mb-2">
+    {% if item.artwork.image %}
+    <img src="{{ item.artwork.image.url }}" alt="{{ item.artwork.name }}" class="cart-item-image-mobile" />
+    {% else %}
+    <img src="/media/default_artwork_image.png" alt="{{ item.artwork.name }}" class="cart-item-image-mobile" />
+    {% endif %}
+  </div>
+  <div class="col-12 col-sm-6 mb-2">
+    <div>{{ item.artwork.name }}</div>
+    <div>Price Each: ${{ item.artwork.price }}</div>
+    <div>
+      <strong>Subtotal: </strong>${{ item.artwork.price|multiply:item.quantity }}
     </div>
   </div>
-  <div class="row">
-    <div class="col"><hr /></div>
+
+  <div class="col-12 col-sm-6">
+    <form method="POST" action="{% url 'adjust_cart' item.artwork.id %}" class="d-inline">
+      {% csrf_token %}
+      <div class="btn-group" role="group">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', -1, 'mobile')"
+          class="btn btn-outline-secondary btn-sm">-</button>
+        <input type="number" name="quantity" min="1" step="1" value="{{ item.quantity }}"
+          id="quantity-mobile-{{ item.artwork.id }}" class="form-control-sm text-center" style="width: 60px;">
+        <button type="button" onclick="updateQuantity('{{ item.artwork.id }}', 1, 'mobile')"
+          class="btn btn-outline-secondary btn-sm">+</button>
+
+        <button type="submit" class="btn btn-primary btn-sm ml-2">Update</button>
+    </form>
+    <form method="POST" action="{% url 'remove_from_cart' item.artwork.id %}" class="d-inline">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger btn-sm ml-2">Delete</button>
+    </form>
   </div>
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <hr />
+  </div>
+</div>
