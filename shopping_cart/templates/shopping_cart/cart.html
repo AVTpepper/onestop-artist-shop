@@ -2,6 +2,10 @@
 {% load static %}
 {% load cart_tools %}
 
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'shopping_cart/css/shopping_cart.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container mb-2">
     <div class="row">
