@@ -52,8 +52,7 @@ def edit_artwork(request, artwork_id):
     
     context = {'artwork': artwork, 'form': form}
 
-    return render(request, 'artworks/edit_artwork.html')
-
+    return render(request, 'artworks/edit_artwork.html', context)   
 
 @user_passes_test(is_staff)
 def delete_artwork(request, artwork_id):
