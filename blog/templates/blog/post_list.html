@@ -14,7 +14,7 @@
                     <img src="{{ artwork.image.url }}" class="image-fluid" alt="{{ artwork.name }}" />
                     {% else %}
                     <!-- default image  -->
-                    <img src="/media/noimage.png" class="image-fluid" alt="{{ artwork.name }}" />
+                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid" alt="{{ artwork.name }}" />
                     {% endif %}
             </div>
             <div class="col-md-8">

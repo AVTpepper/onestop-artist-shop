@@ -23,7 +23,7 @@
             <img src="{{ artwork.image.url }}" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
             {% else %}
             <!-- default image  -->
-            <img src="/media/noimage.png" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
+            <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
             {% endif %}
         </div>
     </div>
