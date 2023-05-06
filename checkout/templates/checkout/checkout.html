@@ -48,10 +48,10 @@
                 <div class="col-7">
                     <p class="my-0"><strong>{{ item.artwork.name }}</strong></p>
 
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    <p class="my-0 small text-muted">Qty: <span class="number-font">{{ item.quantity }}</span></p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="my-0 small text-muted">${{ item.subtotal }}</p>
+                    <p class="my-0 small text-muted number-font">${{ item.subtotal }}</p>
                 </div>
             </div>
             <hr class="my-0">
@@ -62,10 +62,10 @@
                     <p class="my-0">Delivery:</p>
                     <p class="my-0">Grand Total:</p>
                 </div>
-                <div class="col-3">
-                    <p class="my-0">${{ total | floatformat:2 }}</p>
-                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                <div class="col-3 ">
+                    <p class="my-0 number-font">${{ total | floatformat:2 }}</p>
+                    <p class="my-0 number-font">${{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong class="number-font">${{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
@@ -74,12 +74,12 @@
             <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                     {{ form.full_name | as_crispy_field }}
                     {{ form.email | as_crispy_field }}
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                     {{ form.phone_number | as_crispy_field }}
                     {{ form.street_address1 | as_crispy_field }}
@@ -111,17 +111,17 @@
                 </fieldset>
 
                 <div class="submit-button text-right mt-3 mb-2">
-                    <a href="{% url 'shopping_cart' %}" class="btn btn-outline-black btn-secondary rounded-0">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-arrow-left"></i>
+                    <a href="{% url 'artworks' %}" class="btn btn-outline-black rounded-0">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text">Back to Shopping Cart</span>
+                        <span class="text-uppercase">Back to Shopping</span>
                     </a>
-                    <button class="btn  btn-success rounded-0" type="submit" id="submit-button">
+                    <button class="btn btn-success rounded-0 complete-order-btn" type="submit" id="submit-button">
                         <span class="icon text-white-50">
                             <i class="fas fa-check"></i>
                         </span>
-                        <span class="text">Complete Order</span>
+                        <span class="text-uppercase">Complete Order</span>
                     </button>
                 </div>
             </form>
