@@ -39,3 +39,11 @@
 .larger-image {
     width: 400px;
 }
+
+@media (max-width: 525px) {
+    .checkout-btn-margin {
+      margin-top: 0.5rem;
+      margin-left: 0 !important;
+    }
+}
+
