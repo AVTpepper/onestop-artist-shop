@@ -18,18 +18,21 @@
     <div class="container">
         <h4 class="white-smoke text-center mb-4">Featured Art</h4>
         <div class="row">
-            <div class="col-12 col-md-4 featured-image mb-4">
-                <img src="/media/hero-image-test.png" alt="Image 1" class="img-fluid">
+            {% for artwork in featured_artworks %}
+            <div class="col-12 col-md-4 featured-image mb-4 d-flex justify-content-center">
+                <a href="{% url 'artwork_detail' artwork.id %}">
+                    {% if artwork.image %}
+                    <img src="{{ artwork.image.url }}" class="image-fluid" alt="{{ artwork.name }}" />
+                    {% else %}
+                    <!-- default image  -->
+                    <img src="/media/noimage.png" class="image-fluid" alt="{{ artwork.name }}" />
+                    {% endif %}
+                </a>
             </div>
-            <div class="col-12 col-md-4 featured-image mb-4">
-                <img src="/media/hero-image-test.png" alt="Image 2" class="img-fluid">
-            </div>
-            <div class="col-12 col-md-4 featured-image mb-4">
-                <img src="/media/hero-image-test.png" alt="Image 3" class="img-fluid">
-            </div>
+            {% endfor %}
         </div>
         <div class="text-center">
-            <button class="show-more-btn btn btn-outline-primary">Show More</button>
+            <a href="{% url 'artworks' %}" class="btn btn-outline-primary show-more-btn" role="button">Show More</a>
         </div>
     </div>
 </div>
