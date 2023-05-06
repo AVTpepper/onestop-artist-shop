@@ -1,0 +1,1 @@
+web: gunicorn onestop_artist_shop.wsgi:application
