@@ -73,3 +73,17 @@ div.submit-button.text-right.mt-3.mb-2 {
   justify-content: space-around;
 }
 
+.btn-outline-black:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-outline-black {
+  border-color: #333;
+}
+
+@media (max-width: 450px) {
+  .complete-order-btn {
+    margin-bottom: 0.5rem; 
+  }
+}
