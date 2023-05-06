@@ -20,25 +20,31 @@
             <h1>{{ artwork.name }}</h1>
             <hr>
             <p>{{ artwork.description }}</p>
-            <p class="card-text number-font"><span class="ruler-icon">&#128207;</span> Dimensions in cm: {{ artwork.width|floatformat:0 }} x
-                {{ artwork.length|floatformat:0 }}{% if artwork.height %} x {{ artwork.height|floatformat:0 }}{% endif %}</p>
+            <p class="card-text number-font"><span class="ruler-icon">&#128207;</span> Dimensions in cm: 
+                {{ artwork.width|floatformat:0 }} x {{ artwork.length|floatformat:0 }}{% if artwork.height %} x 
+                {{ artwork.height|floatformat:0 }}
+                {% endif %}</p>
             <p class="number-font"><span class="price-tag-icon">&#128176;</span> Price: ${{ artwork.price}}</p>
             <p class="number-font"><span class="star-icon">&#11088;</span> Average rating: {{ artwork.rating|floatformat:1 }}</p>
-                <div class="mt-4">
-                    
-                        <form method="POST" action="{% url 'add_to_cart' artwork.id %}">
-                            {% csrf_token %}
-                            <div class="form-control-button-wrapper mb-3">
-                                <div>
-                                    {{ form | crispy }}
-                                </div>
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                <button type="submit" class="btn btn-success ml-2">Add to Cart</button>
-                            </div>
-                            
-                        </form>
-                        <a href="{% url 'artworks' %}" class="btn btn-outline-secondary">Back to All Artworks</a>
-                </div>
+            <div class="mt-4">
+                <form method="POST" action="{% url 'add_to_cart' artwork.id %}">
+                    {% csrf_token %}
+                    <div class="form-control-button-wrapper mb-3">
+                        <div>
+                            {{ form | crispy }}
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <input type="hidden" name="from_home" value="{{ from_home }}">
+                        <button type="submit" class="btn btn-success ml-2">Add to Cart</button>
+                    </div>
+                </form>
+                {% if from_home == 'yes' %}
+                    <a href="{% url 'home' %}" class="btn btn-outline-secondary">Back to Home</a>
+                    <a href="{% url 'artworks' %}" class="btn btn-outline-secondary">Show more Artworks</a>
+                {% else %}
+                    <a href="{% url 'artworks' %}" class="btn btn-outline-secondary">Back to All Artworks</a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
