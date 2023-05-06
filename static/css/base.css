@@ -236,11 +236,32 @@ footer a:hover {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {    
-    color: #fff;
-    background-color: #222;
-    border-color: #222;
+    margin-bottom: 1%;
+    background: var(--dark-purple);
+    border: 3px solid var(--atomic-tangerine);
+    color: var(--white-smoke);
 }
 
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {    
+    margin-bottom: 1%;
+    background: var(--atomic-tangerine);
+    color: var(--dark-purple);
+    border: 3px solid var(--dark-purple);
+}
+.shop-now-btn, .show-more-btn {
+    margin-bottom: 1%;
+    border-radius: 40px;
+    background: var(--dark-purple);
+    border: 3px solid var(--atomic-tangerine);
+    color: var(--white-smoke);
+}
+
+.shop-now-btn:hover, .show-more-btn:hover {
+    color: var(--atomic-tangerine);
+    background: var(--dark-purple);
+    border-color: var(--atomic-tangerine);
+}
 .allauth-form-inner-content a {
     color: #17a2b8; /* text-info */
 }
