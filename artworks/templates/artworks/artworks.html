@@ -70,7 +70,9 @@
               <button type="submit" class="btn btn-primary">Add to Cart</button>
             </form>
             <a href="{% url 'artwork_detail' artwork_id=artwork.pk %}" class="btn btn-info">Show Details</a>
-            <a href="{% url 'edit_artwork' artwork.id %}">Edit Artwork</a>
+            {% if request.user.is_staff %}
+              <a href="{% url 'edit_artwork' artwork.id %}">Edit Artwork</a>
+            {% endif %}
           </div>
         </div>
       </div>
