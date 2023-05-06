@@ -1,70 +1,87 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="container my-4">
 
-    <h1 class="mb-4">About the Artist</h1>
+    <h1 class="mb-5">About the Artist</h1>
 
     <!-- Artist's Bio -->
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-lg-6">
-            <h2>Biography</h2>
-            <p>John Doe is a renowned artist based in New York. He graduated from the School of Visual Arts in 2010, majoring in fine arts. His works are heavily influenced by the vibrant culture and energy of the city.</p>
+            <h2 class="mb-3">Biography</h2>
+            <p>John Doe is a renowned artist based in New York. He graduated from the School of Visual Arts in 2010,
+                majoring in fine arts. His works are heavily influenced by the vibrant culture and energy of the city.
+            </p>
         </div>
         <div class="col-lg-6">
-            <img src="https://via.placeholder.com/500" class="img-fluid rounded-circle" alt="Artist Picture">
+            {% if artwork.image %}
+            <img src="{{ artwork.image.url }}" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
+            {% else %}
+            <!-- default image  -->
+            <img src="/media/noimage.png" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
+            {% endif %}
         </div>
     </div>
 
     <!-- Artist's Statement -->
-    <div class="row mt-4">
+    <div class="row mb-5">
         <div class="col">
-            <h2>Artist's Statement</h2>
-            <p>"My art is my voice - a celebration of life, love, and harmony. I am deeply inspired by nature, color, and human emotion."</p>
+            <h2 class="mb-3">Artist's Statement</h2>
+            <p>"My art is my voice - a celebration of life, love, and harmony. I am deeply inspired by nature, color,
+                and human emotion."</p>
         </div>
     </div>
 
     <!-- Artistic Journey -->
-    <div class="row mt-4">
+    <div class="row mb-5">
         <div class="col">
-            <h2>Artistic Journey</h2>
-            <p>John has exhibited his work in over 50 group and solo exhibitions worldwide. His work has also been featured in numerous publications, including Art Forum and The New Yorker.</p>
+            <h2 class="mb-3">Artistic Journey</h2>
+            <p>John has exhibited his work in over 50 group and solo exhibitions worldwide. His work has also been
+                featured in numerous publications, including Art Forum and The New Yorker.</p>
         </div>
     </div>
 
     <!-- Artwork -->
-    <div class="row mt-4">
+    <div class="row mb-5">
         <div class="col">
-            <h2>Featured Artwork</h2>
-            <img src="https://via.placeholder.com/500" class="img-fluid rounded" alt="Artwork">
+            <h2 class="mb-3">Featured Artwork</h2>
+            <img src="https://via.placeholder.com/500" class="img-fluid rounded artist-feature-work mb-3" alt="Artwork">
             <p class="mt-2">"Sunrise" - Acrylic on Canvas, 60x60 cm, 2021.</p>
         </div>
     </div>
 
-    <!-- Contact Information -->
-    <div class="row mt-4">
-        <div class="col">
-            <h2>Contact</h2>
+    <!-- Contact Information and Social Media Links -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h2 class="mb-3">Contact</h2>
             <p>Email: john@doe.com</p>
             <p>Phone: +1 234 567 890</p>
         </div>
     </div>
-
-    <!-- Social Media Links -->
-    <div class="row mt-4">
-        <div class="col">
-            <h2>Follow Me</h2>
-            <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h2 class="mb-3">Follow Me</h2>
+            <p>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            </p>
         </div>
     </div>
 
     <!-- Testimonials -->
-    <div class="row mt-4">
+    <div class="row mb-5">
         <div class="col">
-            <h2>Testimonials</h2>
+            <h2 class="mb-3">Testimonials</h2>
             <blockquote class="blockquote">
                 <p class="mb-0">"John's work is truly captivating - full of passion, energy, and emotion."</p>
-                <footer class="blockquote-footer">Art Critic in <cite title="Source Title">The New York Times</cite></footer>
+                <p class="blockquote-footer">Art Critic in <cite title="Source Title">The New York Times</cite>
+                </p>
             </blockquote>
         </div>
     </div>
