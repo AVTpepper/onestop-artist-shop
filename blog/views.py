@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Count
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.http import Http404
 
 from .models import Post, Comment, Like
 from .forms import CommentForm, PostForm
@@ -21,7 +22,12 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    liked = Like.objects.filter(user=request.user, post=post).exists()
+
+    # Check if the user is authenticated
+    if request.user.is_authenticated:
+        liked = Like.objects.filter(user=request.user, post=post).exists()
+    else:
+        liked = False
 
     if request.method == "POST":
         comment_form = CommentForm(request.POST)
@@ -63,9 +69,13 @@ def add_comment(request, pk):
     return render(request, 'blog/add_comment.html', context)
 
 
+def is_staff(user):
+    return user.is_staff
+
+
+@user_passes_test(is_staff, login_url='/blog/')
 @login_required
 def post_create(request):
-    # check if user is not superuser raise the 404 error.
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
