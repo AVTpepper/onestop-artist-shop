@@ -1,1 +1,1 @@
-web: gunicorn onestop-artist-shop.wsgi:application
+web: gunicorn onestop_artist_shop.wsgi:application
