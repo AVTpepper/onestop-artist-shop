@@ -26,6 +26,7 @@ input#mc-embed-subscribe.button {
     background-image: url(/media/hero-image.jpg);
     background-size: cover;
     height: calc(100vh - 100px);
+    padding-top: 56.25%;
 }
 
 .text-background {
@@ -54,4 +55,53 @@ input#mc-embed-subscribe.button {
     color: var(--atomic-tangerine);
     background: var(--dark-purple);
     border-color: var(--atomic-tangerine);
+}
+
+.artist-pic {
+    max-height: 500px
+}
+
+.artist-feature-work {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 300;
+    margin-top: 3rem;
+    color: #4a4a4a;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.artist-pic {
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.artist-feature-work {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #4a4a4a;
+}
+
+a:hover {
+    color: #747474;
+    text-decoration: none;
+}
+
+.social-icons {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 1rem;
 }
