@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import handler400, handler403, handler404, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,3 +29,9 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler403 = 'onestop_artist_shop.views.permission_denied'
+handler400 = 'onestop_artist_shop.views.bad_request'
+handler403 = 'onestop_artist_shop.views.permission_denied'
+handler404 = 'onestop_artist_shop.views.page_not_found'
+handler500 = 'onestop_artist_shop.views.server_error'
