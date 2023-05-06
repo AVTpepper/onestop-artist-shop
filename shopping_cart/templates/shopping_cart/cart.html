@@ -21,7 +21,7 @@
             <!-- For small and extra small screens -->
             <div class="d-block d-md-none">
                 <h6><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
-                {% include "shopping_cart/checkout_buttons.html" %}
+                <div class="d-flex-wrap">{% include "shopping_cart/checkout_buttons.html" %}</div>
 
                 <p class="text-muted mb-5">A summary of your cart contents is below</p>
                 <hr>
@@ -44,6 +44,7 @@
                     <tbody>
                         {% for item in cart_items %}
                         {% include "shopping_cart/desktop_cart.html" with item=item %}
+                        <tr><td colspan="4"><hr></td></tr>
                         {% endfor %}
                     </tbody>
                 </table>
@@ -58,7 +59,6 @@
                 <div class="d-flex justify-content-end mt-3">
                     {% include "shopping_cart/checkout_buttons.html" %}
                 </div>
-                <hr>
             </div>
             {% else %}
             <p class="lead mb-5">Your cart is empty.</p>
