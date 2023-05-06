@@ -6,7 +6,7 @@
     <img src="{{ item.artwork.image.url }}" alt="{{ item.artwork.name }}"
       class="cart-item-image-desktop larger-image" />>
     {% else %}
-    <img src="/media/default_artwork_image.png" alt="{{ item.artwork.name }}"
+    <img src="/media/noimage.png" alt="{{ item.artwork.name }}"
       class="cart-item-image-desktop larger-image" />
     {% endif %}
     <div>{{ item.artwork.name }}</div>
@@ -33,3 +33,4 @@
   </td>
   <td>${{ item.artwork.price|multiply:item.quantity }}</td>
 </tr>
+
