@@ -15,12 +15,6 @@
     max-width: 100%;
 }
 
-input#mc-embed-subscribe.button {
-    color: green;
-    background-color: none;
-    border: 1px solid green;
-}
-
 /* Hero Image */
 .hero-image {
     background-image: url(/media/hero-image.jpg);
@@ -104,4 +98,8 @@ a:hover {
     font-size: 1.5rem;
     display: inline-block;
     margin-right: 1rem;
+}
+
+.max-image-height {
+    max-height: 55vh !important;
 }
