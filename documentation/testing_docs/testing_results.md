@@ -110,9 +110,9 @@ As a **visitor**, I can **submit a message to the artist using a contact form**,
 
 | **Test** | Issue | Result |
 | --- | --- | --- |
-| 1 | The contact form should include fields for the user's name, email address, subject, and message | NOT YET TESTED |
-| 2 | The form should validate user input and provide feedback on successful submission or errors | NOT YET TESTED |
-| 3 | The form should send the submitted message to the artist's email address | NOT YET TESTED |
+| 1 | The contact form should include fields for the user's name, email address, subject, and message | NOT IMPLEMENTED |
+| 2 | The form should validate user input and provide feedback on successful submission or errors | NOT IMPLEMENTED |
+| 3 | The form should send the submitted message to the artist's email address | NOT IMPLEMENTED |
 
 ### Issue 12: Basic Search Functionality [#23](https://github.com/AVTpepper/onestop-artist-shop/issues/23) (not yet implemented)
 
@@ -120,9 +120,9 @@ As a **visitor**, I can **search for specific artworks and products using keywor
 
 | **Test** | Issue | Result |
 | --- | --- | --- |
-| 1 | Users should be able to enter keywords into a search bar and receive relevant search results | NOT YET TESTED |
-| 2 | Search results should display in a list or grid format, similar to the product listing page | NOT YET TESTED |
-| 3 | The search functionality should be accessible from any page on the website | NOT YET TESTED |
+| 1 | Users should be able to enter keywords into a search bar and receive relevant search results | NOT IMPLEMENTED |
+| 2 | Search results should display in a list or grid format, similar to the product listing page | NOT IMPLEMENTED |
+| 3 | The search functionality should be accessible from any page on the website | NOT IMPLEMENTED |
 
 ### Issue 9: Order Processing and Management [#20](https://github.com/AVTpepper/onestop-artist-shop/issues/20)
 
@@ -199,21 +199,25 @@ As an **administrator**, I can **have a reliable backend infrastructure**, so th
 
 ### **CSS**
 
-The [W3C CSS Validator Service](https://jigsaw.w3.org/css-validator/) returned ________.
+The [W3C CSS Validator Service](https://jigsaw.w3.org/css-validator/) returned 1 error and 719 warnings. All the warnings came bcause of vendor extensions, and mostly from using bootstrap classes.
+![CSS-validation](/documentation/readme_images/CSS_validation.png)
+
+After removing the css for the mailchimp subscribe button there were no css errors found, only the warnings. Suggestions for removing the warnings would be to create my own CSS classes for what the warning errors were showing.
+
+### **HTML**
+
+Each page of the deployed website was run through the [HTML Markup Validation Service](https://validator.w3.org/) and returned only a few errors, most of them which were complaining about the static urls. 1 or two warnings / erros about wrapping a tags within buttons. That was a quick fix by just removing the button element and gave the a tag bootstrap classes.
+
 
 ### **Lighthouse**
 
-
-
 * **Desktop**:
-
-![desktop-lighthouse]()
+I would love to learn how to better modify my home page to further increase the performance. This was the second lighthouse test I ran since the first time my SEO score, because when looking through the results I had not yet implemented any meta descriptions.
+![desktop-lighthouse](/documentation/readme_images/desktop_lighthouse_test.png)
 
 * **Mobile**:
 
+From reading the suggestions on how to improve the performance it seems to be that I have to many scripts loading, which I assume is from the base template, but also that my sizing of certain elements are not set to a specific height and width. I am using bootstrap classes which modifies the size of each element depending on the screen size. I suppose that if I set media queries for each screen size determining the height and width at each point would lead to the performance being higher. That would be something to implement at a later point.
 
-
-* Developers Results:
-
-![mobile-lighthouse]()
+![mobile-lighthouse](/documentation/readme_images/mobile_lighthouse_test.png)
 
