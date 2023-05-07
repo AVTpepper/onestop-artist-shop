@@ -231,6 +231,7 @@ All Epics, User Stories, and Backend Tasks can be found in the [GitHub repositor
 * The website was tested on multiple browsers, including Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge, to ensure compatibility and consistent user experience.
 
 ### Bugs
+- On the blog post detail page, for each comment that was shown they all were added the same ID. I wasnt able to figure out how to give them seperate ids. Therefore this is a bug that I will want to fix at a later point.
 
 #### Resolved Bugs
 

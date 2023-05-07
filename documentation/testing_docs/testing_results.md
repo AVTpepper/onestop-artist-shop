@@ -206,7 +206,9 @@ After removing the css for the mailchimp subscribe button there were no css erro
 
 ### **HTML**
 
-Each page of the deployed website was run through the [HTML Markup Validation Service](https://validator.w3.org/) and returned only a few errors, most of them which were complaining about the static urls. 1 or two warnings / erros about wrapping a tags within buttons. That was a quick fix by just removing the button element and gave the a tag bootstrap classes.
+Each page of the deployed website was run through the [HTML Markup Validation Service](https://validator.w3.org/).
+
+- On the blog post detail page, for each comment that was shown they all were added the same ID. I wasnt able to figure out how to give them seperate ids. Therefore this is a bug that I will want to fix at a later point.
 
 
 ### **Lighthouse**

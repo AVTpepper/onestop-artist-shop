@@ -123,11 +123,13 @@
     <div id="messages">
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }}" role="alert">
-            <button type="button" class="close" aria-label="Close">
-                <div class="spinner-border text-light spinner-border-sm" role="status">
+
+            <div class="spinner-border text-light spinner-border-sm" role="status">
+                <button type="button" class="close" aria-label="Close">
                     <span class="sr-only">Loading...</span>
-                </div>
-            </button>
+                </button>
+            </div>
+
             <span class="countdown" style="display:none">10</span>
             {{ message }}
         </div>
