@@ -43,9 +43,6 @@ def artwork_detail(request, artwork_id):
     return render(request, 'artworks/artwork_detail.html', context)
 
 
-
-
-
 @permission_required('is_staff', raise_exception=True)
 def edit_artwork(request, artwork_id):
     artwork = get_object_or_404(Artwork, id=artwork_id)
