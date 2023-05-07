@@ -11,10 +11,10 @@
         <div class="row no-gutters">
             <div class="col-md-4">
                 {% if post.image %}
-                    <img src="{{ MEDIA_URL }}posts/{{ post.image }}" class="image-fluid" alt="post image">
+                    <img src="{{ post.image.url }}" class="image-fluid" alt="post-image">
                     {% else %}
                     <!-- default image  -->
-                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid" alt="post image">
+                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid" alt="post-image">
                     {% endif %}
             </div>
             <div class="col-md-8">
