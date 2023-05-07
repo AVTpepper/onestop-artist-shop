@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
+<div class="container my-4">
     <h1 class="my-4">Frequently Asked Questions</h1>
 
     <div id="accordion">
@@ -9,15 +9,16 @@
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Question 1 <i class="fas fa-chevron-down"></i>
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        What payment methods do you accept? <i class="fas fa-chevron-down"></i>
                     </button>
                 </h5>
             </div>
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
-                    Answer to question 1.
+                    We accept Visa, Mastercard, American Express, Discover, and PayPal.
                 </div>
             </div>
         </div>
@@ -26,18 +27,110 @@
         <div class="card">
             <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Question 2 <i class="fas fa-chevron-down"></i>
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        What is your return policy? <i class="fas fa-chevron-down"></i>
                     </button>
                 </h5>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
-                    Answer to question 2.
+                    We offer a 30-day return policy for items that are unused and in their original condition. To
+                    initiate a return, please contact our customer service team at support@onestopartistshop.com.
                 </div>
             </div>
         </div>
 
+        <!-- Question 3 -->
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                        How long does shipping take? <i class="fas fa-chevron-down"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Our standard shipping time is 3-5 business days. However, shipping times may vary based on your
+                    location and the availability of the item. You can track your order using the tracking number
+                    provided in your confirmation email.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                        aria-expanded="false" aria-controls="collapseFour">
+                        How do I contact customer service? <i class="fas fa-chevron-down"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                    You can contact our customer service team by emailing support@onestopartistshop.com or by calling
+                    1-800-123-4567 during our business hours: Monday-Friday, 9am-5pm EST.
+                </div>
+            </div>
+        </div>
+        <!-- Question 5 -->
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                        aria-expanded="false" aria-controls="collapseFive">
+                        Do you offer international shipping? <i class="fas fa-chevron-down"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                    Yes, we offer international shipping. Please note that shipping times and fees may vary depending on
+                    your location and the items ordered.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                        aria-expanded="false" aria-controls="collapseSix">
+                        How do I know if an item is in stock? <i class="fas fa-chevron-down"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                <div class="card-body">
+                    If the item is listed for sale then it is in stock.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 8 -->
+        <div class="card">
+            <div class="card-header" id="headingEight">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                        aria-expanded="false" aria-controls="collapseEight">
+                        Can I cancel or modify my order? <i class="fas fa-chevron-down"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                <div class="card-body">
+                    If you need to cancel or modify your order, please contact our customer service team as soon as
+                    possible at support@onestopartistshop.com or by calling 1-800-123-4567. We will do our best to
+                    accommodate your request if the order has not yet shipped.
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
