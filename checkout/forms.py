@@ -2,6 +2,10 @@ from django import forms
 from .models import Order
 
 class OrderForm(forms.ModelForm):
+    """
+    A form based on the Order model to collect and validate user input for creating an order.
+    This form includes custom placeholders and styling for better user experience.
+    """
     class Meta:
         model = Order
         fields = ('user', 'full_name', 'email', 'phone_number', 'country', 'postcode', 'town_or_city', 'street_address1', 'street_address2', 'county')

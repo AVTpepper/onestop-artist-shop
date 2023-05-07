@@ -11,6 +11,11 @@ import uuid
 
 
 class Order(models.Model):
+    """
+    A model to store information about a customer's order.
+    This model includes fields for order details, user information, shipping address, and payment information.
+    The save method is overridden to generate a unique order number and update the total cost.
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
@@ -54,6 +59,11 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    A model to store information about individual items within an order.
+    This model includes fields for the related order, artwork, quantity, and line item total.
+    The save method is overridden to calculate the line item total and update the order total.
+    """
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     artwork = models.ForeignKey(Artwork, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)

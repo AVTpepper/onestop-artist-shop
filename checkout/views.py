@@ -14,6 +14,10 @@ import stripe
 import json
 
 def checkout(request):
+    """
+    Handle the checkout process: display the checkout form, process form submissions, and handle payment.
+    If the form is valid, an Order is created and the user is redirected to the complete_order view.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -114,7 +118,8 @@ def checkout(request):
 
 def complete_order(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts. Display the order completion page.
+    If the user is authenticated, save their information if requested and link the order to their profile.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -156,6 +161,9 @@ def complete_order(request, order_number):
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Cache the checkout data on the payment intent for later use in the webhook.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
