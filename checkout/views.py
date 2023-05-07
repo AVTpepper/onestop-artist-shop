@@ -30,7 +30,7 @@ def checkout(request):
 
     if not stripe_public_key:
         messages.warning(
-            request, 'Stripe public key is missing.
+            request, 'Stripe public key is missing.'
             'Did you forget to set it in your environment?')
 
     current_cart = shopping_cart_contents(request)
@@ -83,7 +83,7 @@ def checkout(request):
                     order_line_item.save()
                 except Artwork.DoesNotExist:
                     messages.error(request, (
-                        f"The artwork with id {item['artwork'].id}
+                        f"The artwork with id {item['artwork'].id}"
                         "in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
@@ -96,7 +96,7 @@ def checkout(request):
                 reverse('complete_order', args=[order.order_number]))
         else:
             messages.error(
-                request, 'There was an error with your form.
+                request, 'There was an error with your form.'
                 'Please check your information.')
     else:
         # If this is a GET request,

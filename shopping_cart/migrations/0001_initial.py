@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                         serialize=False,
                         verbose_name='ID'
                     ),
-                )
+                ),
                 ('quantity', models.PositiveIntegerField(default=1)),
                 (
                     'artwork',
@@ -42,7 +42,6 @@ class Migration(migrations.Migration):
                         to=settings.AUTH_USER_MODEL
                     ),
                 ),
-
             ],
         ),
     ]
