@@ -10,11 +10,11 @@
     <div class="card mt-4">
         <div class="row no-gutters">
             <div class="col-md-4">
-                {% if artwork.image %}
-                    <img src="{{ artwork.image.url }}" class="image-fluid" alt="{{ artwork.name }}">
+                {% if post.image %}
+                    <img src="{{ MEDIA_URL }}posts/{{ artwork.image.url }}" class="image-fluid" alt="post image">
                     {% else %}
                     <!-- default image  -->
-                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid" alt="{{ artwork.name }}">
+                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid" alt="post image">
                     {% endif %}
             </div>
             <div class="col-md-8">
