@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid hero-image text-center py-5" aria-label="large nature painting">
+<div class="container-fluid hero-image text-center py-5">
     <div class="text-background d-flex flex-column align-items-center justify-content-center">
         <p class="lead">Discover the finest art collection for your every need.</p>
         <a class="shop-now-btn btn btn-primary btn-lg" href="{% url 'artworks' %}" role="button">Shop Now</a>
@@ -22,10 +22,10 @@
             <div class="col-12 col-md-4 featured-image mb-4 d-flex justify-content-center">
                 <a href="{% url 'artwork_detail' artwork.id %}">
                     {% if artwork.image %}
-                    <img src="{{ artwork.image.url }}" class="image-fluid max-image-height" alt="{{ artwork.name }}" />
+                    <img src="{{ artwork.image.url }}" class="image-fluid max-image-height" alt="{{ artwork.name }}">
                     {% else %}
                     <!-- default image  -->
-                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid max-image-height" alt="{{ artwork.name }}" />
+                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid max-image-height" alt="{{ artwork.name }}">
                     {% endif %}
                 </a>
             </div>
@@ -73,7 +73,7 @@
                                         class="button">
                                     <p class="brandingLogo"><a href="http://eepurl.com/ioXKXg"
                                             title="Mailchimp - email marketing made easy and fun"><img
-                                                src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a>
+                                                src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="mailchimp-logo"></a>
                                     </p>
                                 </div>
                             </div>
@@ -88,7 +88,6 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script
-    type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+<script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
 {% endblock %}
