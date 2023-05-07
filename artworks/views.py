@@ -35,7 +35,7 @@ def artwork_detail(request, artwork_id):
     form = AddToCartForm(initial={'artwork_id': artwork.id})
 
     from_home = 'yes' if request.session.get('referrer') == 'home' else 'no'
-    
+
     context = {
         'artwork': artwork,
         'form': form,
@@ -61,10 +61,10 @@ def edit_artwork(request, artwork_id):
             return redirect('artwork_detail', artwork_id=artwork.id)
     else:
         form = ArtworkEditForm(instance=artwork)
-    
+
     context = {'artwork': artwork, 'form': form}
 
-    return render(request, 'artworks/edit_artwork.html', context)   
+    return render(request, 'artworks/edit_artwork.html', context)
 
 
 @permission_required('is_staff', raise_exception=True)
@@ -107,6 +107,6 @@ def add_artwork(request):
             return redirect('artwork_detail', artwork_id=artwork.id)
     else:
         form = AddArtworkForm()
-    
+
     context = {'form': form}
     return render(request, 'artworks/add_artwork.html', context)

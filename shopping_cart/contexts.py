@@ -2,10 +2,13 @@ from decimal import Decimal
 from django.shortcuts import get_object_or_404
 from artworks.models import Artwork
 
+
 def shopping_cart_contents(request):
     """
-    Calculate the shopping cart contents and generate a context dictionary with cart items, total, artwork count,
-    and grand total. This context can be used in views and templates to display shopping cart information.
+    Calculate the shopping cart contents and generate a context dictionary with
+    cart items, total, artwork count,
+    and grand total. This context can be used in views and templates to display
+    shopping cart information.
     """
 
     cart_items = []

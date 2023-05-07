@@ -11,7 +11,8 @@ from checkout.models import Order
 def profile(request):
     """
     Display the user's profile and allow them to update their information.
-    If the form is submitted and valid, save the changes and display a success message.
+    If the form is submitted and valid,
+    save the changes and display a success message.
     """
     profile = get_object_or_404(UserProfile, user=request.user)
 
@@ -21,7 +22,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -44,11 +46,12 @@ def profile(request):
 def order_history(request, order_number):
     """
     Display the order history for the given order_number.
-    If the order does not belong to the current user, display an error message and redirect to the profile page.
+    If the order does not belong to the current user,
+    display an error message and redirect to the profile page.
     """
     profile = get_object_or_404(UserProfile, user=request.user)
     order = Order.objects.get(order_number=order_number)
-    
+
     if profile != order.user_profile:
         messages.error(request, (
             'This order does not belong to you.'

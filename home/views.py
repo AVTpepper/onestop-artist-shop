@@ -8,7 +8,8 @@ from artworks.models import Artwork
 
 def index(request):
     """ A view to return the index page """
-    featured_artworks = Artwork.objects.filter(is_featured=True).order_by('?')[:3]
+    featured_artworks = Artwork.objects.filter(
+        is_featured=True).order_by('?')[:3]
     request.session['referrer'] = 'home'
 
     context = {

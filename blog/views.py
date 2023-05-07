@@ -7,10 +7,10 @@ from .models import Post, Comment, Like
 from .forms import CommentForm, PostForm
 
 
-
 def post_list(request):
     """
-    A view that displays a list of all posts, including the number of likes and comments for each post.
+    A view that displays a list of all posts,
+    including the number of likes and comments for each post.
     """
     posts = Post.objects.all().annotate(
         likes_count=Count('likes'),
@@ -25,7 +25,8 @@ def post_list(request):
 
 def post_detail(request, pk):
     """
-    A view that displays the details of a specific post, including its comments and whether the current user has liked the post.
+    A view that displays the details of a specific post,
+    including its comments and whether the current user has liked the post.
     """
     post = get_object_or_404(Post, pk=pk)
 
@@ -70,7 +71,7 @@ def add_comment(request, pk):
             return redirect('post_detail', pk=post.pk)
     else:
         form = CommentForm()
-    
+
     context = {
         'form': form
     }
@@ -100,7 +101,7 @@ def post_create(request):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
-    
+
     context = {
         'form': form
     }
@@ -207,7 +208,8 @@ def post_delete(request, pk):
 @login_required
 def post_management(request):
     """
-    A view that displays a list of all posts for staff members, including the number of likes and comments for each post, to manage them.
+    A view that displays a list of all posts for staff members,
+    including the number of likes and comments for each post, to manage them.
     """
     posts = Post.objects.all().annotate(
         likes_count=Count('likes'),

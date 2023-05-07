@@ -13,10 +13,12 @@ from profiles.forms import UserProfileForm
 import stripe
 import json
 
+
 def checkout(request):
     """
-    Handle the checkout process: display the checkout form, process form submissions, and handle payment.
-    If the form is valid, an Order is created and the user is redirected to the complete_order view.
+    Handle the checkout process: display the checkout form,
+    process form submissions, and handle payment. If the form is valid,
+    an Order is created and the user is redirected to the complete_order view.
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -27,7 +29,9 @@ def checkout(request):
         profile = None
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
+        messages.warning(
+            request, 'Stripe public key is missing.
+            'Did you forget to set it in your environment?')
 
     current_cart = shopping_cart_contents(request)
     total = current_cart['total']
@@ -37,7 +41,8 @@ def checkout(request):
         amount=stripe_total,
         currency=settings.STRIPE_CURRENCY,
         metadata={
-            'shopping_cart': json.dumps(request.session.get('shopping_cart', {})),
+            'shopping_cart': json.dumps(
+                request.session.get('shopping_cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': str(request.user),
         }
@@ -59,12 +64,14 @@ def checkout(request):
         form = OrderForm(form_data)
         if form.is_valid():
             order = form.save(commit=False)
-            order.user = request.user if request.user.is_authenticated else None
+            order.user = (
+                request.user if request.user.is_authenticated else None
+            )
             order.total = total
             order.save()
             for item in current_cart['cart_items']:
                 try:
-                    artwork = Artwork.objects.get(id=item['artwork'].id)  # Make sure the artwork exists in DB
+                    artwork = Artwork.objects.get(id=item['artwork'].id)
                     quantity = item['quantity']
                     lineitem_total = item['subtotal']
                     order_line_item = OrderLineItem(
@@ -76,7 +83,8 @@ def checkout(request):
                     order_line_item.save()
                 except Artwork.DoesNotExist:
                     messages.error(request, (
-                        f"The artwork with id {item['artwork'].id} in your bag wasn't found in our database. "
+                        f"The artwork with id {item['artwork'].id}
+                        "in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -84,11 +92,15 @@ def checkout(request):
 
             messages.success(request, 'Order successfully placed!')
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('complete_order', args=[order.order_number]))
+            return redirect(
+                reverse('complete_order', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. Please check your information.')
+            messages.error(
+                request, 'There was an error with your form.
+                'Please check your information.')
     else:
-        # If this is a GET request, pre-fill the form with the user's default delivery info
+        # If this is a GET request,
+        # pre-fill the form with the user's default delivery info
         if profile:
             initial_data = {
                 'full_name': profile.user.get_full_name(),
@@ -119,13 +131,14 @@ def checkout(request):
 def complete_order(request, order_number):
     """
     Handle successful checkouts. Display the order completion page.
-    If the user is authenticated, save their information if requested and link the order to their profile.
+    If the user is authenticated, save their information if requested and link
+    the order to their profile.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)  # Adjust this according to your user model
+        profile = UserProfile.objects.get(user=request.user)
         # Save the user's info
         if save_info:
             profile_data = {
@@ -137,10 +150,10 @@ def complete_order(request, order_number):
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
-            user_profile_form = UserProfileForm(profile_data, instance=profile)  # Adjust this according to your user model
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-        
+
         order.user_profile = profile
         order.save()
 
@@ -168,7 +181,8 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'shopping_cart': json.dumps(request.session.get('shopping_cart', {})),
+            'shopping_cart': json.dumps(
+                request.session.get('shopping_cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -177,4 +191,3 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
-

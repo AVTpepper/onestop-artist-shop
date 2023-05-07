@@ -1,6 +1,7 @@
 from django import forms
 from .models import Artwork
 
+
 class ArtworkEditForm(forms.ModelForm):
     """
     ArtworkEditForm is a form used for editing an existing Artwork instance.

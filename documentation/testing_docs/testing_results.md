@@ -7,6 +7,7 @@
     * [JSX](#jsx)
     * [CSS](#css)
     * [Lighthouse](#lighthouse)
+    * [Python](#python)
 
 ## **Testing User Stories**
 
@@ -214,8 +215,9 @@ Each page of the deployed website was run through the [HTML Markup Validation Se
 - Edited code in the stripe javascript (a semi-colon and an unused variable).
 - In my artworks.js file I did initially receive errors for using "let" so changed all of those to "var". Also, I got this error which I am not sure how to fix:
 "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentPage, i, paginateArtworks)"
-- 
 
+### **Python**
+- After using "pycodestyle" on all of directories in the app I had quite a few "line too long errors". I went through and fixed them all except for the ones in already migrated files to avoid any database issues with current existing models.
 
 
 ### **Lighthouse**
