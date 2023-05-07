@@ -9,6 +9,9 @@ from .forms import CommentForm, PostForm
 
 
 def post_list(request):
+    """
+    A view that displays a list of all posts, including the number of likes and comments for each post.
+    """
     posts = Post.objects.all().annotate(
         likes_count=Count('likes'),
         comments_count=Count('comments')
@@ -21,6 +24,9 @@ def post_list(request):
 
 
 def post_detail(request, pk):
+    """
+    A view that displays the details of a specific post, including its comments and whether the current user has liked the post.
+    """
     post = get_object_or_404(Post, pk=pk)
 
     # Check if the user is authenticated
@@ -50,6 +56,9 @@ def post_detail(request, pk):
 
 @login_required
 def add_comment(request, pk):
+    """
+    A view that allows a user to add a comment to a specific post.
+    """
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
         form = CommentForm(request.POST)
@@ -70,12 +79,18 @@ def add_comment(request, pk):
 
 
 def is_staff(user):
+    """
+    A helper function that checks if a user is a staff member.
+    """
     return user.is_staff
 
 
 @user_passes_test(is_staff, login_url='/blog/')
 @login_required
 def post_create(request):
+    """
+    A view that allows staff members to create a new post.
+    """
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
@@ -95,6 +110,9 @@ def post_create(request):
 
 @login_required
 def like_post(request, post_id):
+    """
+    A view that toggles a like on a specific post for the current user.
+    """
     post = get_object_or_404(Post, id=post_id)
     liked = Like.objects.filter(user=request.user, post=post)
     if liked.exists():
@@ -106,6 +124,9 @@ def like_post(request, post_id):
 
 @login_required
 def comment_edit(request, pk):
+    """
+    A view that allows a user to edit their own comment on a post.
+    """
     comment = get_object_or_404(Comment, pk=pk, author=request.user)
     post_pk = comment.post.pk
 
@@ -126,6 +147,9 @@ def comment_edit(request, pk):
 
 @login_required
 def comment_delete(request, pk):
+    """
+    A view that allows a user to delete their own comment on a post.
+    """
     comment = get_object_or_404(Comment, pk=pk, author=request.user)
     post_pk = comment.post.pk
 
@@ -139,6 +163,9 @@ def comment_delete(request, pk):
 @user_passes_test(is_staff, login_url='/blog/')
 @login_required
 def post_edit(request, pk):
+    """
+    A view that allows staff members to edit an existing post.
+    """
     post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
@@ -161,6 +188,9 @@ def post_edit(request, pk):
 @user_passes_test(is_staff, login_url='/blog/')
 @login_required
 def post_delete(request, pk):
+    """
+    A view that allows staff members to delete an existing post.
+    """
     post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
         post.delete()
@@ -176,6 +206,9 @@ def post_delete(request, pk):
 @user_passes_test(is_staff, login_url='/blog/')
 @login_required
 def post_management(request):
+    """
+    A view that displays a list of all posts for staff members, including the number of likes and comments for each post, to manage them.
+    """
     posts = Post.objects.all().annotate(
         likes_count=Count('likes'),
         comments_count=Count('comments')
