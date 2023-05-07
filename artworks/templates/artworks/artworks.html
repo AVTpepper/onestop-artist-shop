@@ -41,10 +41,10 @@
       <div class="card">
         <div class="card-image-wrapper">
           {% if artwork.image %}
-          <img src="{{ artwork.image.url }}" class="card-img-top" alt="{{ artwork.name }}" />
+          <img src="{{ artwork.image.url }}" class="card-img-top" alt="{{ artwork.name }}">
           {% else %}
           <!-- default image  -->
-          <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ artwork.name }}" />
+          <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ artwork.name }}">
           {% endif %}
         </div>
         <div class="card-body">
