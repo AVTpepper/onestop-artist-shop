@@ -19,12 +19,7 @@
             </p>
         </div>
         <div class="col-lg-6">
-            {% if artwork.image %}
-            <img src="{{ artwork.image.url }}" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
-            {% else %}
-            <!-- default image  -->
-            <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
-            {% endif %}
+            <img src="{{ MEDIA_URL }}profile_pic.jpg" class="img-fluid rounded-circle artist-pic mb-3" alt="Artist Picture" />
         </div>
     </div>
 
@@ -68,7 +63,7 @@
             <h2 class="mb-3">Follow Me</h2>
             <p>
                 <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+                <a href="https://www.facebook.com/profile.php?id=100092670633258" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
                 <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
             </p>
         </div>
