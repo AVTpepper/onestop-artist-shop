@@ -231,7 +231,7 @@ All Epics, User Stories, and Backend Tasks can be found in the [GitHub repositor
 * The website was tested on multiple browsers, including Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge, to ensure compatibility and consistent user experience.
 
 ### Bugs
-- On the blog post detail page, for each comment that was shown they all were added the same ID. I wasnt able to figure out how to give them seperate ids. Therefore this is a bug that I will want to fix at a later point.
+There have been several coding challenges under the entirety of the project. However, at this point in time when writing the README, I either have resolved the bugs or they remain unresolved.
 
 #### Resolved Bugs
 
@@ -243,7 +243,11 @@ All Epics, User Stories, and Backend Tasks can be found in the [GitHub repositor
 * Padding and margins added for several pages to view the content.
 
 #### Unresolved Bugs
-- N/A
+- On the blog post detail page, for each comment that was shown they all were added the same ID. I wasnt able to figure out how to give them seperate ids. Therefore this is a bug that I will want to fix at a later point.
+- The W3C CSS Validator Service returned 1 error and 719 warnings. All the warnings came bcause of vendor extensions, and mostly from using bootstrap classes.
+- I got this error when using Jshint on my JS files, and I am not sure how to fix it:
+"Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentPage, i, paginateArtworks)".
+
 
 
 ### Lighthouse Testing Outcomes

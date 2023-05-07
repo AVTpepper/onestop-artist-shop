@@ -1,23 +1,23 @@
 
 $(document).ready(function () {
     // Initial variables
-    let currentPage = 1;
-    let artworksPerPage = 12;
-    let selectedCategoryId = null;
+    var currentPage = 1;
+    var artworksPerPage = 12;
+    var selectedCategoryId = null;
 
     function paginateArtworks() {
         // Get filtered artworks
-        let filteredArtworks = $(".artwork" + (selectedCategoryId ? '[data-category="' + selectedCategoryId + '"]' : ""));
+        var filteredArtworks = $(".artwork" + (selectedCategoryId ? '[data-category="' + selectedCategoryId + '"]' : ""));
 
         // Calculate the total number of pages
-        let totalPages = Math.ceil(filteredArtworks.length / artworksPerPage);
+        var totalPages = Math.ceil(filteredArtworks.length / artworksPerPage);
 
         // Hide all artworks
         $(".artwork").hide();
 
         // Show artworks for the current page
-        let startIndex = (currentPage - 1) * artworksPerPage;
-        let endIndex = startIndex + artworksPerPage;
+        var startIndex = (currentPage - 1) * artworksPerPage;
+        var endIndex = startIndex + artworksPerPage;
         filteredArtworks.slice(startIndex, endIndex).show();
 
         // Update the pagination UI
@@ -29,7 +29,7 @@ $(document).ready(function () {
         $(".pagination").empty();
 
         // Previous button
-        let prevItem = $('<li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>');
+        var prevItem = $('<li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>');
         prevItem.click(function (e) {
             e.preventDefault();
             if (currentPage > 1) {
@@ -40,15 +40,15 @@ $(document).ready(function () {
         $(".pagination").append(prevItem);
 
         // Page range calculation
-        let startPage = Math.max(1, currentPage - 1);
-        let endPage = Math.min(totalPages, startPage + 2);
+        var startPage = Math.max(1, currentPage - 1);
+        var endPage = Math.min(totalPages, startPage + 2);
         if (endPage - startPage < 2) {
             startPage = Math.max(1, endPage - 2);
         }
 
         // Add pagination links
-        for (let i = startPage; i <= endPage; i++) {
-            let pageItem = $('<li class="page-item"><a class="page-link" href="#">' + i + "</a></li>");
+        for (var i = startPage; i <= endPage; i++) {
+            var pageItem = $('<li class="page-item"><a class="page-link" href="#">' + i + "</a></li>");
             if (i === currentPage) {
                 pageItem.addClass("active");
             }
@@ -61,7 +61,7 @@ $(document).ready(function () {
         }
 
         // Next button
-        let nextItem = $('<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>');
+        var nextItem = $('<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>');
         nextItem.click(function (e) {
             e.preventDefault();
             if (currentPage < totalPages) {
@@ -86,7 +86,7 @@ $(document).ready(function () {
         $(".category-link").not(this).addClass("grayed-out");
 
         selectedCategoryId = $(this).data("category");
-        let selectedCategoryName = $(this).find('.card-title').text();
+        var selectedCategoryName = $(this).find('.card-title').text();
 
         // Reset the current page and update pagination
         currentPage = 1;
