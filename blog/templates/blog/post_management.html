@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<!-- Add any custom CSS or dependencies here -->
-{% endblock %}
 
 {% block content %}
 <div class="container my-5">
@@ -17,53 +14,55 @@
           </a>
     </div>
 
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Comments</th>
-                <th>Likes</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for post in posts %}
-            <tr>
-                <td>
-                    <a href="{% url 'post_detail' post.pk %}">
-                        {{ post.title }}
-                    </a>
-                </td>
-                <td>{{ post.author }}</td>
-                <td>{{ post.comments_count }} <i class="fas fa-comments"></i></td>
-                <td>{{ post.likes_count }} <i class="fas fa-thumbs-up"></i></td>
-                <td>
-                    <a href="{% url 'post_edit' post.id %}" class="btn btn-sm btn-info">Update</a>
-                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ post.pk }}">Delete</button>
+    <div class="table-responsive"> 
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Comments</th>
+                    <th>Likes</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr>
+                    <td>
+                        <a href="{% url 'post_detail' post.pk %}">
+                            {{ post.title }}
+                        </a>
+                    </td>
+                    <td>{{ post.author }}</td>
+                    <td>{{ post.comments_count }} <i class="fas fa-comments"></i></td>
+                    <td>{{ post.likes_count }} <i class="fas fa-thumbs-up"></i></td>
+                    <td>
+                        <a href="{% url 'post_edit' post.id %}" class="btn btn-sm btn-info">Update</a>
+                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ post.pk }}">Delete</button>
 
-                    <!-- Delete Confirmation Modal -->
-                    <div class="modal fade" id="deleteModal{{ post.pk }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="deleteModalLabel">Delete Post</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure you want to delete the post "{{ post.title }}"?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger">Delete</a>
+                        <!-- Delete Confirmation Modal -->
+                        <div class="modal fade" id="deleteModal{{ post.pk }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModalLabel">Delete Post</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete the post "{{ post.title }}"?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger">Delete</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div> 
 </div>
 {% endblock %}

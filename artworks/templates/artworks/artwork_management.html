@@ -14,51 +14,58 @@
         <a href="{% url 'add_artwork' %}" class="btn btn-primary">Add New Artwork</a>
     </div>
 
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Rating</th>
-                <th>Price</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for artwork in artworks %}
-            <tr>
-                <td>
-                    <a href="{% url 'artwork_detail' artwork.pk %}">
-                        {{ artwork.name }}
-                    </a>
-                </td>
-                <td>{{ artwork.rating }}</td>
-                <td>{{ artwork.price }}</td>
-                <td>
-                    <a href="{% url 'edit_artwork' artwork.id %}" class="btn btn-sm btn-info">Update</a>
-                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ artwork.pk }}">Delete</button>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Rating</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for artwork in artworks %}
+                <tr>
+                    <td>
+                        <a href="{% url 'artwork_detail' artwork.pk %}">
+                            {{ artwork.name }}
+                        </a>
+                    </td>
+                    <td>{{ artwork.rating }}</td>
+                    <td>{{ artwork.price }}</td>
+                    <td>
+                        <a href="{% url 'edit_artwork' artwork.id %}" class="btn btn-sm btn-info">Update</a>
+                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
+                            data-target="#deleteModal{{ artwork.pk }}">Delete</button>
 
-                    <!-- Delete Confirmation Modal -->
-                    <div class="modal fade" id="deleteModal{{ artwork.pk }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="deleteModalLabel">Delete Artwork</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure you want to delete the artwork "{{ artwork.name }}"?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <a href="{% url 'delete_artwork' artwork.pk %}" class="btn btn-danger">Delete</a>
+                        <!-- Delete Confirmation Modal -->
+                        <div class="modal fade" id="deleteModal{{ artwork.pk }}" tabindex="-1"
+                            aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModalLabel">Delete Artwork</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete the artwork "{{ artwork.name }}"?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <a href="{% url 'delete_artwork' artwork.pk %}"
+                                            class="btn btn-danger">Delete</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 {% endblock %}
