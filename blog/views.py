@@ -134,3 +134,54 @@ def comment_delete(request, pk):
         return redirect('post_detail', pk=post_pk)
 
     return redirect('post_detail', pk=post_pk)
+
+
+@user_passes_test(is_staff, login_url='/blog/')
+@login_required
+def post_edit(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('post_management')
+    else:
+        form = PostForm(instance=post)
+
+    context = {
+        'form': form,
+        'post': post,
+    }
+
+    return render(request, 'blog/post_edit.html', context)
+
+
+@user_passes_test(is_staff, login_url='/blog/')
+@login_required
+def post_delete(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        post.delete()
+        return redirect('post_management')
+
+    context = {
+        'post': post,
+    }
+
+    return render(request, 'blog/post_delete.html', context)
+
+
+@user_passes_test(is_staff, login_url='/blog/')
+@login_required
+def post_management(request):
+    posts = Post.objects.all().annotate(
+        likes_count=Count('likes'),
+        comments_count=Count('comments')
+    )
+
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'blog/post_management.html', context)
