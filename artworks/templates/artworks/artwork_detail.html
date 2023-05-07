@@ -9,9 +9,9 @@
 {% block content %}
 <div class="container d-flex justify-content-center flex-column my-4">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 mt-3 d-flex justify-content-center ">
             {% if artwork.image %}
-            <img src="{{ artwork.image.url }}" alt="{{ artwork.name }}" class="img-fluid" />
+            <img src="{{ artwork.image.url }}" alt="{{ artwork.name }}" class="img-fluid img-height-limit" />
             {% else %}
             <img src="{{ MEDIA_URL }}noimage.png" alt="{{ artwork.name }}" class="img-fluid" />
             {% endif %}

@@ -148,3 +148,7 @@ div.form-control-button-wrapper.mb-3 {
 button.btn.btn-success.ml-2 {
     margin-top: 0.5rem;
 }
+
+.img-height-limit {
+    max-height: 70vh !important;
+}
