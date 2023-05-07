@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 
 
 class Category(models.Model):
+    """
+    Represents a category for artworks.
+    """
 
     class Meta:
         verbose_name_plural = 'Categories'
@@ -20,6 +23,9 @@ class Category(models.Model):
 
 
 class Artwork(models.Model):
+    """
+    Represents an artwork with its associated attributes.
+    """
     TYPE_CHOICES = [
         ('2D', 'Two-dimensional'),
         ('3D', 'Three-dimensional'),

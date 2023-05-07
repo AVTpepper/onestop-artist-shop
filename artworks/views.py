@@ -11,7 +11,9 @@ from .forms import ArtworkEditForm, AddArtworkForm
 
 
 def all_artworks(request):
-    """ A view to show all products, including sorting and search queries """
+    """
+    A view to show all artworks, including sorting and search queries.
+    """
 
     artworks = Artwork.objects.all()
     categories = Category.objects.all()
@@ -26,6 +28,9 @@ def all_artworks(request):
 
 
 def artwork_detail(request, artwork_id):
+    """
+    A view to show the detail of an artwork based on the artwork_id.
+    """
     artwork = get_object_or_404(Artwork, pk=artwork_id)
     form = AddToCartForm(initial={'artwork_id': artwork.id})
 
@@ -45,6 +50,9 @@ def artwork_detail(request, artwork_id):
 
 @permission_required('is_staff', raise_exception=True)
 def edit_artwork(request, artwork_id):
+    """
+    A view for editing an existing artwork, accessible only to staff users.
+    """
     artwork = get_object_or_404(Artwork, id=artwork_id)
     if request.method == 'POST':
         form = ArtworkEditForm(request.POST, request.FILES, instance=artwork)
@@ -61,6 +69,9 @@ def edit_artwork(request, artwork_id):
 
 @permission_required('is_staff', raise_exception=True)
 def delete_artwork(request, artwork_id):
+    """
+    A view for deleting an artwork, accessible only to staff users.
+    """
     artwork = get_object_or_404(Artwork, id=artwork_id)
     artwork.delete()
 
@@ -75,6 +86,9 @@ def delete_artwork(request, artwork_id):
 
 @permission_required('is_staff', raise_exception=True)
 def artwork_management(request):
+    """
+    A view for staff users to manage the artworks.
+    """
     artworks = Artwork.objects.all()
     print("Number of artworks", artworks.count())
     context = {'artworks': artworks}
@@ -83,6 +97,9 @@ def artwork_management(request):
 
 @permission_required('is_staff', raise_exception=True)
 def add_artwork(request):
+    """
+    A view for adding a new artwork, accessible only to staff users.
+    """
     if request.method == 'POST':
         form = AddArtworkForm(request.POST, request.FILES)
         if form.is_valid():
