@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.db.models import Q
 
 from artworks.models import Artwork
+from blog.models import Post
 
 # Create your views here.
 
@@ -25,3 +26,19 @@ def about(request):
 
 def faq(request):
     return render(request, 'home/faq.html')
+
+
+def search(request):
+    query = request.GET.get('q', '')
+
+    blog_posts = Post.objects.filter(Q(title__icontains=query) | Q(content__icontains=query))
+    artworks = Artwork.objects.filter(Q(name__icontains=query) | Q(description__icontains=query) | Q(category__name__icontains=query))
+
+
+    context = {
+        'blog_posts': blog_posts,
+        'artworks': artworks,
+        'query': query
+    }
+
+    return render(request, 'home/search_results.html', context)
