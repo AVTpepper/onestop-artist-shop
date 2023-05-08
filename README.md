@@ -217,7 +217,7 @@ User stories are based on four types of users: anonymous users, buyer users, sel
 3. As a staff member, I can edit and delete blog posts, so that I can manage the content on the website efficiently.
 4. As an administrator, I can have a reliable backend infrastructure, so that the e-commerce site functions properly and manages data efficiently.
 
-All Epics, User Stories, and Backend Tasks can be found in the [GitHub repository project Kanban board](https://github.com/users/AVTpepper/projects/5).
+Milestones, Issues, User Stories, Tasks, and Acceptance Criteria can be found in the [GitHub repository project Kanban board](https://github.com/users/AVTpepper/projects/5).
 
 
 ## Manual Testing
