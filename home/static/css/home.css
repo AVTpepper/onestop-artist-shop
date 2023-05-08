@@ -102,6 +102,7 @@ a:hover {
 
 .max-image-measurements {
     max-height: 55vh !important;
+    max-width: 100%;
 }
 
 .search-card-header {
@@ -129,5 +130,17 @@ a:hover {
 }
 
 .hover-border:hover {
+    border: 2px solid var(--atomic-tangerine);
+}
+
+
+.artwork-image {
+    height: 55vh;
+    object-fit: cover;
+}
+
+.artwork-image:hover {
+    height: 55vh;
+    object-fit: cover;
     border: 2px solid var(--atomic-tangerine);
 }
