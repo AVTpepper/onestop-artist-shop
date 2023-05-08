@@ -4,10 +4,10 @@
   <td>
     {% if item.artwork.image %}
     <img src="{{ item.artwork.image.url }}" alt="{{ item.artwork.name }}"
-      class="cart-item-image-desktop larger-image" />>
+      class="cart-item-image-desktop larger-image"/>
     {% else %}
     <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.artwork.name }}"
-      class="cart-item-image-desktop larger-image" />
+      class="cart-item-image-desktop larger-image"/>
     {% endif %}
     <div>{{ item.artwork.name }}</div>
   </td>
