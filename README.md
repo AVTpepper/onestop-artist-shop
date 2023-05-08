@@ -17,9 +17,13 @@ OneStop Artist Shop is an online marketplace platform designed for an artist to 
 6. [Marketing](#marketing)
 7. [User Stories](#user-stories)
 8. [Manual Testing](#manual-testing)
-9. [Technologies Used](#technologies-used)
-10. [References and Credits](#references-and-credits)
-11. [Procedures](#procedures)
+9. [Automatic Testing](#automatic-testing)
+10. [Testing Document](#testing-document)
+11. [App Features](#app-features)
+12. [CRUD Operations](#crud-operations)
+13. [Technologies Used](#technologies-used)
+14. [Deployment Procedures](#deployment-procedures)
+15. [Credits](#credits)
 
 ## Project Rationale
 OneStop Artist Shop was developed to provide a seamless online platform for artists to showcase and sell their artwork while also offering art enthusiasts an opportunity to discover, browse, and purchase unique art pieces. The project's primary purpose is to serve as a B2C-focused e-commerce platform that bridges the gap between artists and art buyers, allowing for a streamlined and enjoyable online shopping experience.
@@ -39,13 +43,15 @@ OneStop Artist Shop demonstrates expertise, authoritativeness, and trustworthine
 The platform offers various internal pages for users to explore, such as profile pages, blog pages, product categories, testimonials, an about page. Opportunities for external linking may include artist websites, art blogs, educational resources, social media profiles, and art events or exhibitions.
 
 To help users discover other relevant parts of the web application, OneStop Artist Shop incorporates clear navigation, internal links, breadcrumbs, call-to-action buttons.
+<hr>
 
 ## **Purpose, Goal, and Target Audience**
-### **- Purpose and Goal**
+
+### **Purpose and Goal**
  The purpose and goal of the OneStop Artist Shop project is to create an online marketplace platform where artists can showcase and sell their artwork. This platform aims to provide a user-friendly, feature-rich, and visually appealing environment for artists and art enthusiasts alike. By doing so, it enables artists to reach a broader audience and helps them monetize their art, while providing art lovers with a curated selection of unique, high-quality pieces to discover and purchase.
 
 The project also aims to create a community around art by allowing users to interact with each other, leave comments on blog posts, arists to share their experiences, and users to subscribe to newsletters for the latest news, offers, and new releases. By fostering this community, OneStop Artist Shop aims to not only support the artists and their work but also nurture an appreciation for art and encourage conversations around it.
-### Target Audience
+### **Target Audience**
 
 The target audience for the OneStop Artist Shop includes the following groups:
 
@@ -58,8 +64,9 @@ The target audience for the OneStop Artist Shop includes the following groups:
 **Interior Designers and Decorators**: Professionals who source art for their clients' homes, offices, or commercial spaces. OneStop Artist Shop offers them a convenient platform to find unique and diverse artworks that cater to different tastes and styles.
 
 **General Public**: Individuals who may not necessarily have a strong background in art but are interested in exploring and appreciating it. The platform offers an inviting and accessible way to discover new artists, learn about different art styles, and potentially start their journey as art collectors.
+<hr>
 
-### Addressing Audience Needs
+### **Addressing Audience Needs**
 
 To cater to the diverse needs of the target audience, the OneStop Artist Shop offers the following features:
 
@@ -78,16 +85,12 @@ To cater to the diverse needs of the target audience, the OneStop Artist Shop of
 7. **Secure Transactions**: The platform integrates secure payment processing methods, allowing buyers to confidently purchase artwork with ease.
 
 By providing these features and functionalities, OneStop Artist Shop effectively addresses the needs of its target audience, creating a comprehensive and engaging platform for artists and art lovers alike.
+<hr>
 
 
-## Business and Customer Goals
-- Purpose and Value to Users and Business
-- Purpose Testing
-- Mapping Project Goals to User Stories
+## **Business and Customer Goals**
 
-## Business and Customer Goals
-
-### Purpose and Value to Users and Business
+### **Purpose and Value to Users and Business**
 
 OneStop Artist Shop aims to provide a platform where artists can showcase and sell their artwork, while art enthusiasts and collectors can discover and purchase unique pieces. The purpose of the platform is to create a thriving community of artists and art lovers, facilitating the growth of the art market and providing value to all parties involved.
 
@@ -97,15 +100,15 @@ OneStop Artist Shop aims to provide a platform where artists can showcase and se
 
 - **For Business**: OneStop Artist Shop benefits from increased traffic, user registrations, and transactions, driving revenue and growth for the platform.
 
-### Purpose Testing
+### **Purpose Testing**
 
 To ensure that the platform's purpose is effectively met, I conducted testing throughout the development process which included:
 
-- User experience testing: Ensuring that the platform is user-friendly, intuitive, and responsive on various devices and screen sizes.
-- Feature testing: Verifying that all features are functioning correctly and align with the platform's purpose and goals.
-- User feedback: Gathering feedback from users to identify areas for improvement and further address their needs.
+- **User experience testing**: Ensuring that the platform is user-friendly, intuitive, and responsive on various devices and screen sizes.
+- **Feature testing**: Verifying that all features are functioning correctly and align with the platform's purpose and goals.
+- **User feedback**: Gathering feedback from users to identify areas for improvement and further address their needs.
 
-### Mapping Project Goals to User Stories
+### **Mapping Project Goals to User Stories**
 
 The project goals are mapped to user stories to ensure that the platform addresses the needs of its target audience. Some examples include:
 
@@ -115,12 +118,12 @@ The project goals are mapped to user stories to ensure that the platform address
 - As a user, I want to engage with the community by leaving comments on blog posts, and liking.
 
 By mapping project goals to user stories, it becomes easier to prioritize features and ensure that the platform effectively addresses the needs of its users.
+<hr>
+
+## **UI/UX Design**
 
 
-## UI/UX Design
-
-
-### Wireframes
+### **Wireframes**
 
 My wireframes were created to give me an idea of what I wanted my project to look like. Below are the wireframes for the various pages of OneStop Artist Shop:
 
@@ -135,9 +138,9 @@ My wireframes were created to give me an idea of what I wanted my project to loo
 - [Landing Page](/documentation/readme_images/Landing%20page.png)
 - [Products Page](/documentation/readme_images/Products%20page.png)
 - [Newsletter Sign Up](/documentation/readme_images/Newsletter%20Sign%20Up.png)
+<hr>
 
-
-### Color Scheme
+### **Color Scheme**
 
 The color scheme for OneStop Artist Shop consists of a combination of complementary and contrasting colors to create an aesthetically pleasing and accessible design. The primary colors used are:
 
@@ -146,29 +149,30 @@ It was created with [coolors](https://coolors.co/).
 ![coolors palette](/documentation/readme_images/coolors%20palette.png)
 
 These colors are used throughout the platform to maintain consistency and improve the overall user experience.
+<hr>
 
-### Implementation
+### **Implementation**
 
 The implementation of the UI/UX design involved translating the wireframes into functional and responsive web pages. The design was implemented using HTML, CSS, and JavaScript, ensuring that the platform is accessible on various devices and screen sizes. Throughout the implementation process, the design was iteratively improved based on feedback and testing, resulting in a polished and user-friendly platform.
+<hr>
 
-
-## Database Design
-### ERD Diagram
+## **Database Design**
+### **ERD Diagram**
 ![ERD Diagram](/documentation/readme_images/database-diagram.png)
-### Relationships between Tables (Models)
+### **Relationships between Tables (Models)**
 
-- Artwork has a foreign key to Category (one-to-many relationship): Each artwork belongs to one category, while a category can have multiple artworks.
-- Post has a foreign key to User (one-to-many relationship): Each post is created by one user (author), while a user can create multiple posts.
-- Comment has foreign keys to User and Post (one-to-many relationships): Each comment is created by one user and belongs to one post, while a user can create multiple comments, and a post can have multiple comments.
-- Like has foreign keys to User and Post (many-to-many relationship): A user can like multiple posts, and a post can be liked by multiple users.
-- Order has foreign keys to User and UserProfile (one-to-many relationships): Each order is placed by one user and is related to one user profile, while a user can place multiple orders, and a user profile can have multiple orders.
-- OrderLineItem has foreign keys to Order and Artwork (many-to-many relationship): An order can have multiple artworks, and an artwork can be part of multiple orders.
-- UserProfile has a one-to-one relationship with User: Each user has one user profile, and each user profile is associated with one user.
-- CartItem has foreign keys to User and Artwork (many-to-many relationship): A user can have multiple artworks in their cart, and an artwork can be in multiple users' carts.
+- **Artwork** has a foreign key to **Category** (one-to-many relationship): Each artwork belongs to one category, while a category can have multiple artworks.
+- **Post** has a foreign key to **User** (one-to-many relationship): Each post is created by one user (author), while a user can create multiple posts.
+- **Comment** has foreign keys to **User** and **Post** (one-to-many relationships): Each comment is created by one user and belongs to one post, while a user can create multiple comments, and a post can have multiple comments.
+- **Like** has foreign keys to **User** and **Post** (many-to-many relationship): A user can like multiple posts, and a post can be liked by multiple users.
+- **Order** has foreign keys to **User** and **UserProfile** (one-to-many relationships): Each order is placed by one user and is related to one user profile, while a user can place multiple orders, and a user profile can have multiple orders.
+- **OrderLineItem** has foreign keys to **Order** and **Artwork** (many-to-many relationship): An order can have multiple artworks, and an artwork can be part of multiple orders.
+- **UserProfile** has a one-to-one relationship with **User**: Each user has one user profile, and each user profile is associated with one user.
+- **CartItem** has foreign keys to **User** and **Artwork** (many-to-many relationship): A user can have multiple artworks in their cart, and an artwork can be in multiple users' carts.
+<hr>
 
 
-
-## Marketing
+## **Marketing**
 
 ### **eCommerce Business Model**
 Our business model is focused on providing an online platform for artists to showcase and sell their artwork to customers around the world. By connecting artists with potential buyers, we create a thriving marketplace for unique contemporary art.
@@ -193,14 +197,14 @@ The application is primarily B2C focused, catering to individual customers who w
 - **Partnerships**: Partner with local galleries, museums, and art events to gain exposure and drive traffic to the platform.
 - **SEO optimization**: Optimize the website and its content(blog and artwork detail pages) for search engines to rank higher and attract more organic traffic.
 
-### Facebook Mockup
+### **Facebook Mockup**
 A Facebook mockup page has been created to showcase the platform's latest updates, featured artists, events, and promotional content. This will serve as a key marketing channel for reaching and engaging with potential customers.
 
 ![Facebookpage](/documentation/readme_images/1st%20half%20of%20FB%20page.png)
 ![Facebookpage](/documentation/readme_images/2nd%20half%20of%20FB%20page.png)
+<hr>
 
-
-## User Stories
+## **User Stories**
 
 User stories are based on four types of users: anonymous users, buyer users, seller users, and staff users.
 
@@ -210,7 +214,7 @@ User stories are based on four types of users: anonymous users, buyer users, sel
 - Staff users are defined as those users whose accounts have been created by admin in the backend, and who have been marked as "is_staff" and as a result having access to the blog features of the web application.
   - **Note:** These accounts can _only_ be made in the backend using the admin panel. They are treated as employee accounts and thus can only be made for special use, unlike the previous two users.
 
-### Example User Stories
+### **Example User Stories**
 
 1. As a visitor, I can browse through the available artworks and products, so that I can find and select items to purchase.
 2. As a registered user, I can add products to my shopping cart, so that I can review and purchase them later.
@@ -218,22 +222,22 @@ User stories are based on four types of users: anonymous users, buyer users, sel
 4. As an administrator, I can have a reliable backend infrastructure, so that the e-commerce site functions properly and manages data efficiently.
 
 Milestones, Issues, User Stories, Tasks, and Acceptance Criteria can be found in the [GitHub repository project Kanban board](https://github.com/users/AVTpepper/projects/5).
+<hr>
 
+## **Manual Testing**
 
-## Manual Testing
-
-### Responsiveness Testing
+### **Responsiveness Testing**
 
 * The website's responsiveness was tested using Google Chrome Developer Tools' device emulator and by manually resizing the browser window. Various devices and screen sizes were tested to ensure that the layout and elements adapt correctly.
 
-### Browser Compatibility Testing
+### **Browser Compatibility Testing**
 
 * The website was tested on multiple browsers, including Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge, to ensure compatibility and consistent user experience.
 
-### Bugs
+### **Bugs**
 There have been several coding challenges under the entirety of the project. However, at this point in time when writing the README, I either have resolved the bugs or they remain unresolved.
 
-#### Resolved Bugs
+#### **Resolved Bugs**
 
 * Issue with navigation menu on mobile devices
     * _Solution: Implemented a responsive navigation menu using Bootstrap._
@@ -242,7 +246,7 @@ There have been several coding challenges under the entirety of the project. How
     * _Solution: Adjusted the CSS to make images responsive and maintain their aspect ratio._
 * Padding and margins added for several pages to view the content.
 
-#### Unresolved Bugs
+#### **Unresolved Bugs**
 - On the blog post detail page, for each comment that was shown they all were added the same ID. I wasnt able to figure out how to give them seperate ids. Therefore this is a bug that I will want to fix at a later point.
 - The W3C CSS Validator Service returned 1 error and 719 warnings. All the warnings came bcause of vendor extensions, and mostly from using bootstrap classes.
 - I got this error when using Jshint on my JS files, and I am not sure how to fix it:
@@ -251,26 +255,28 @@ There have been several coding challenges under the entirety of the project. How
 
 
 
-### Lighthouse Testing Outcomes
+### **Lighthouse Testing Outcomes**
 
 * Lighthouse was used to evaluate the website's performance, accessibility, best practices, and SEO. Based on the results, several improvements were made, such as optimizing images, enhancing contrast, and adding descriptive alt text to images.
 
-### Code Validation
+### **Code Validation**
 
 * HTML code was validated using the [W3C Markup Validation Service](https://validator.w3.org/).
 * CSS code was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
 * JavaScript code was validated using [JSHint](https://jshint.com/).
 * Python code was validated using `pycodestyle` linter in the development environment.
 
-### User Stories Testing
+### **User Stories Testing**
 
 * Each user story was tested to ensure that it met the acceptance criteria and provided the intended user experience. The results were documented and used to guide the development process.
 
-### Features Testing
+### **Features Testing**
 
 * Each feature of the application was tested to ensure that it functioned correctly and met the project requirements. This included testing forms, navigation, and user authentication.
 
-### Testing document
+## **Automatic Testing**
+
+## **Testing document**
 Please click [here](/documentation/testing_docs/testing_results.md) to view all the testing results mentioned above.
 <hr>
 
@@ -309,7 +315,7 @@ Please click [here](/documentation/testing_docs/testing_results.md) to view all 
 **Footer** is a part of the base template. From here you can access the privacy page and FAQ page.
 <hr>
 
-### Artworks Page
+### **Artworks Page**
 **Filtering** can be done by selecting a category.
 
 <img src="documentation/feature_testing_images/filtering.png" alt="filtering" style="width: 400px;">
@@ -423,14 +429,15 @@ Please click [here](/documentation/testing_docs/testing_results.md) to view all 
 <hr>
 
 ### Future Features to Implement
-- Search bar functionality.
+- ~~Search bar functionality.~~
 - Allowing the artist to edit their about page on the frontend.
-- Admin panel access to the blog functionality.
+- ~~Admin panel access to the blog functionality.~~
 - More SEO keywords throughout the website for higher SEO ranking.
 - More customizeable text input for comments on posts.
 - Contact form for customers to reach support.
 - An open forum for all registered users to share their artwork and ideas.
 - More social media implementations, such as login and share functionality to different social media platforms.
+- Events / Exhibitions Page.
 <hr>
 
 ## **CRUD Operations**
@@ -498,18 +505,14 @@ Please click [here](/documentation/testing_docs/testing_results.md) to view all 
     - To deploy the project.
 + [Stripe](https://stripe.com/gb)
     - Stripe is used to handle website payments.
-- Frameworks, Libraries, and Programs Used
 
-## References and Credits
-- Boutique Ado Boilerplate
-- Additional Tutorials
-- Media and Content for Educational Purposes
 
-## Deployment Procedures
+
+## **Deployment Procedures**
 
 This project was deployed using GitHub and Heroku.
 
-### GitHub
+### **GitHub**
 
 1. Start a new repository.
    - Log in to GitHub.
@@ -518,7 +521,7 @@ This project was deployed using GitHub and Heroku.
    - Add a repository name and click "Create repository" at the bottom of the page.
    - Then, click the Gitpod button.
 
-### Gitpod and Django
+### **Gitpod and Django**
 
 1. Install Django and other necessary libraries:
    - Use `pip install Django` to install Django.
@@ -528,7 +531,7 @@ This project was deployed using GitHub and Heroku.
 4. Generate a `requirements.txt` file by running `pip3 freeze --local > requirements.txt`.
 5. Create a `Procfile`.
 
-### Heroku
+### **Heroku**
 
 1. Log in to Heroku.
 2. Click the "New" button, then select "New app".
@@ -542,7 +545,7 @@ This project was deployed using GitHub and Heroku.
 10. Once the app is built with Python and all the dependencies, you'll see a message that says "The app was successfully deployed".
 11. Click on "View" to see the [deployed site](https://avtpepper-onestop-artist-shop.herokuapp.com/).
 
-### AWS S3 Bucket Creation
+### **AWS S3 Bucket Creation**
 
 1. Sign up for an Amazon Web Services (AWS) account if you haven't already.
 2. Navigate to the S3 service in the AWS Management Console.
@@ -551,7 +554,7 @@ This project was deployed using GitHub and Heroku.
 5. Create an IAM user with programmatic access and the necessary permissions for managing your S3 bucket.
 6. Save the IAM user's access key and secret access key, and add them as environment variables in your project and Heroku app.
 
-### Stripe Configuration
+### **Stripe Configuration**
 
 1. Sign up for a Stripe account and log in.
 2. Navigate to the "Developers" section and click "API keys".
@@ -561,24 +564,18 @@ This project was deployed using GitHub and Heroku.
 
 By following these procedures, you should be able to successfully set up your development environment, deploy your app on Heroku, configure AWS S3 for media storage, and integrate Stripe for payments.
 
+<hr>
 
+## **Credits**
 
+### **Code**
+Stackoverflow seems to always have the answer to my questions. In addiotn, the bootstrap docs for version 4.6 was very helpful this time around.
+### **Credits**
+- Boutique Ado Walkthrough
+- Media and Content for Educational Purposes
 
+### **Acknowledgments**
 
+Big thanks goes out to my new mentor Rohit for guiding me through this challenging Project and giving me specific guidance that really kept my head clear on the target.
 
-
-
-
-## 15. Credits
-
-### Inspiration
-
-List the sources of inspiration for the project.
-
-### Code
-
-Credit any borrowed code.
-
-### Acknowledgments
-
-List any acknowledgments.
+The tutot team has been great help too troubleshooting issues that have come up throughout the project.
