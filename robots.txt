@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /account/
+Disallow: /profiles/
+Disallow: /checkout/
+Sitemap: https://avtpepper-onestop-artist-shop.herokuapp.com/sitemap.xml
