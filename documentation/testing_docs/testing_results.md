@@ -8,6 +8,7 @@
     * [CSS](#css)
     * [Lighthouse](#lighthouse)
     * [Python](#python)
+*[Features](#testing-features)
 
 ## **Testing User Stories**
 
@@ -231,4 +232,53 @@ I would love to learn how to better modify my home page to further increase the 
 From reading the suggestions on how to improve the performance it seems to be that I have to many scripts loading, which I assume is from the base template, but also that my sizing of certain elements are not set to a specific height and width. I am using bootstrap classes which modifies the size of each element depending on the screen size. I suppose that if I set media queries for each screen size determining the height and width at each point would lead to the performance being higher. That would be something to implement at a later point.
 
 ![mobile-lighthouse](/documentation/readme_images/mobile_lighthouse_test.png)
+
+## **Testing Features**
+
+### Home Page
+
+**Navbar** is responsive and all links work as intended, except for the search functionality which is yet to be implemented.
+![full-navbar](/documentation/feature_testing_images/navbar.png)
+![responsive-navbar](/documentation/feature_testing_images/closed-responsive-navbar.png)
+![open-navbar](/documentation/feature_testing_images/open-responsive-navbar.png)
+<hr>
+
+**Call-To-Action** button is placed on the hero-image to entice users to view the artwork that the artist is selling. Fully responsive.
+![call-to-action](/documentation/feature_testing_images/call-to-action.png)
+<hr>
+
+**Featured Art** section allows the staff/admin to select artworks to be featured on the landing page. Each image will link to their respective detail page. There is another CTA button here which will direct users to view all the artworks.
+![call-to-action](/documentation/feature_testing_images/featured-art.png)
+<hr>
+
+**Newsletter** sign up is also available on the landing page.
+![newsletter](/documentation/feature_testing_images/newsletter.png)
+<hr>
+
+**Footer** is a part of the base template. From here you can access the privacy page and FAQ page.
+<hr>
+
+### Artworks Page
+**Filtering** can be done by selecting a category.
+![filtering](/documentation/feature_testing_images/filtering.png)
+![filtering-2](/documentation/feature_testing_images/filtering-2.png)
+
+**Artwork Listings** are shown as paginated cards. Each card has two CTAs; Add To Cart and Show Details. Admin has access to Edit Artwork button.
+![artwork-listings](/documentation/feature_testing_images/artwork-listing.png)
+![pagination](/documentation/feature_testing_images/pagination.png)
+
+**Edit Artwork** page allowst the staff / admin to edit several fields for the artwork listings.
+![edit-artwork](/documentation/feature_testing_images/edit-artwork.png)
+
+**Artwork Detail**, you arrive at this page if you updated an artwork or a user clicked show details from the artworks page. From here you can add to cart, select quantity, see all the information about the artwork, or go back to the artworks page.
+![artwork-detail](/documentation/feature_testing_images/artwork-detail.png)
+
+**Messages** will be shown throughout the app depending on user action. For example, if the user adds an item to the cart then this information will pop up for 10 seconds.
+![message](/documentation/feature_testing_images/add-message.png)
+
+
+
+
+
+
 
