@@ -99,7 +99,7 @@ OneStop Artist Shop aims to provide a platform where artists can showcase and se
 
 ### Purpose Testing
 
-To ensure that the platform's purpose is effectively met, it is essential to conduct testing throughout the development process. This may include:
+To ensure that the platform's purpose is effectively met, I conducted testing throughout the development process which included:
 
 - User experience testing: Ensuring that the platform is user-friendly, intuitive, and responsive on various devices and screen sizes.
 - Feature testing: Verifying that all features are functioning correctly and align with the platform's purpose and goals.
@@ -170,28 +170,28 @@ The implementation of the UI/UX design involved translating the wireframes into 
 
 ## Marketing
 
-### eCommerce Business Model
+### **eCommerce Business Model**
 Our business model is focused on providing an online platform for artists to showcase and sell their artwork to customers around the world. By connecting artists with potential buyers, we create a thriving marketplace for unique contemporary art.
 
-### Purpose of the Application
+### **Purpose of the Application**
 The purpose of the application is to simplify the process of discovering, buying, and selling art. It offers a user-friendly interface for artists to upload their work and manage their profiles, while customers can easily browse, search, and purchase art pieces that resonate with them.
 
-### B2B or B2C Focused
+### **B2B or B2C Focused**
 The application is primarily B2C focused, catering to individual customers who wish to purchase art pieces for their personal enjoyment or as gifts. However, we also provide opportunities for B2B relationships, such as collaborations with art galleries, interior designers, and corporate clients looking for unique art pieces for their spaces.
 
-### Core Business Intents
+### **Core Business Intents**
 - Providing a diverse collection of contemporary art pieces for customers to explore and purchase
 - Offering a platform for talented artists to showcase their work and gain exposure
 - Simplifying the art buying process for customers through a user-friendly interface and secure payment options
 - Facilitating communication and collaboration between artists, buyers, and other stakeholders in the art world
 
-### Marketing Strategies for the Application
+### **Marketing Strategies for the Application**
 - **Blogs**: Regularly publish blog articles on topics related to art, artists, and the art world to attract visitors and improve SEO ranking.
 - **Social media**: Leverage platforms like Facebook and Instagram to share images of featured artworks, artist profiles, and upcoming events to engage with the audience.
 - **Email campaigns**: Send out newsletters to subscribers, informing them about new arrivals, featured artists, promotions, and special events.
 - **Influencer marketing**: Collaborate with art influencers and bloggers to promote the platform and its artists to a wider audience.
 - **Partnerships**: Partner with local galleries, museums, and art events to gain exposure and drive traffic to the platform.
-- **SEO optimization**: Optimize the website and its content for search engines to rank higher and attract more organic traffic.
+- **SEO optimization**: Optimize the website and its content(blog and artwork detail pages) for search engines to rank higher and attract more organic traffic.
 
 ### Facebook Mockup
 A Facebook mockup page has been created to showcase the platform's latest updates, featured artists, events, and promotional content. This will serve as a key marketing channel for reaching and engaging with potential customers.
@@ -247,6 +247,7 @@ There have been several coding challenges under the entirety of the project. How
 - The W3C CSS Validator Service returned 1 error and 719 warnings. All the warnings came bcause of vendor extensions, and mostly from using bootstrap classes.
 - I got this error when using Jshint on my JS files, and I am not sure how to fix it:
 "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentPage, i, paginateArtworks)".
+- Country field selection on profile page got a weird background color and bad contrast with the changing font color.
 
 
 
@@ -267,13 +268,236 @@ There have been several coding challenges under the entirety of the project. How
 
 ### Features Testing
 
-* Each feature of the application was tested to ensure that it functioned correctly and met the project requirements. This included testing forms, navigation, search functionality, and user authentication.
+* Each feature of the application was tested to ensure that it functioned correctly and met the project requirements. This included testing forms, navigation, and user authentication.
 
 ### Testing document
 Please click [here](#) to view all the testing results mentioned above.
+<hr>
+
+## **App Features**
+
+
+### **Home Page**
+
+**Navbar** is responsive and all links work as intended, except for the search functionality which is yet to be implemented.
+
+<img src="documentation/feature_testing_images/navbar.png" alt="full-navbar" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/closed-responsive-navbar.png" alt="responsive-navbar" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/open-responsive-navbar.png" alt="open-navbar" style="width: 400px;">
+<hr>
+
+**Call-To-Action** button is placed on the hero-image to entice users to view the artwork that the artist is selling. Fully responsive.
+
+<img src="documentation/feature_testing_images/call-to-action.png" alt="call-to-action" style="width: 400px;">
+
+<hr>
+
+**Featured Art** section allows the staff/admin to select artworks to be featured on the landing page. Each image will link to their respective detail page. There is another CTA button here which will direct users to view all the artworks.
+
+<img src="documentation/feature_testing_images/featured-art.png" alt="featured-art" style="width: 400px;">
+
+<hr>
+
+**Newsletter** sign up is also available on the landing page.
+
+<img src="documentation/feature_testing_images/newsletter.png" alt="newsletter" style="width: 400px;">
+
+<hr>
+
+**Footer** is a part of the base template. From here you can access the privacy page and FAQ page.
+<hr>
+
+### Artworks Page
+**Filtering** can be done by selecting a category.
+
+<img src="documentation/feature_testing_images/filtering.png" alt="filtering" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/filtering-2.png" alt="filtering-2" style="width: 400px;">
+
+<hr>
+
+**Artwork Listings** are shown as paginated cards. Each card has two CTAs; Add To Cart and Show Details. Admin has access to Edit Artwork button.
+
+<img src="documentation/feature_testing_images/artwork-listing.png" alt="artwork-listings" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/pagination.png" alt="pagination" style="width: 400px;">
+
+<hr>
+
+**Edit Artwork** page allowst the staff / admin to edit several fields for the artwork listings.
+
+<img src="documentation/feature_testing_images/edit-artwork.png" alt="edit-artwork" style="width: 400px;">
+
+<hr>
+
+**Artwork Detail**, you arrive at this page if you updated an artwork or a user clicked show details from the artworks page. From here you can add to cart, select quantity, see all the information about the artwork, or go back to the artworks page.
+
+<img src="documentation/feature_testing_images/artwork-detail.png" alt="artwork-detail" style="width: 400px;">
+
+<hr>
+
+**Messages** will be shown throughout the app depending on user action. For example, if the user adds an item to the cart then this information will pop up for 10 seconds.
+
+<img src="documentation/feature_testing_images/add-message.png" alt="message" style="width: 400px;">
+
+<hr>
+
+**Shopping Cart** will be where the user can update the quantity of their selected items. Delete items from the shopping cart, but most importantly view what they have added to their cart. There is are also two CTA buttons here, secure checkout and keep shopping.
+
+<img src="documentation/feature_testing_images/shopping-cart.png" alt="shopping-cart" style="width: 400px;">
+
+<hr>
+
+**Checkout** page shows the user their order summary and the user is prompted to fill in their details and delivery information. If the user is signed in they can save their information, and if they arlready updated their profile then these fields might be filled out already for the registered user.
+
+<img src="documentation/feature_testing_images/checkout.png" alt="checkout-page" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/complete_order.png" alt="complete-order" style="width: 400px;">
+
+<hr>
+
+**Order Information Page** is where users and visitors can see their order details. Registered users will have their order information links saved to their profiles as well.
+
+<img src="documentation/feature_testing_images/order-info.png" alt="order-info" style="width: 400px;">
+
+<hr>
+
+**Blog Page** is available to all visitors. The post management button is only available for admin / staff.
+
+<img src="documentation/feature_testing_images/blog-page.png" alt="blog-page" style="width: 400px;">
+
+<hr>
+
+**Post Detail Page** gives the app a sense of community where users can communicate with artists or other visitors through comments and reading the same information. Users can edit and delete their own comments. Staff and admin can delete other users comments but can only edit their own comments.
+
+<img src="documentation/feature_testing_images/post-detail-page.png" alt="post-detail" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/edit-comment.png" alt="edit-comment" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/delete-comment.png" alt="delete-comment" style="width: 400px;">
+
+<hr>
+
+**Blog Management Page** for admin and staff to easily access the update page for a post, or deleting a post. There are also statistics for likes and comments available. From this page, you can also create a new blog post.
+
+<img src="documentation/feature_testing_images/blog-management.png" alt="blog-management" style="width: 400px;">
+
+<hr>
+
+**About Page** for visitors to get to know the artist just a little bit better and a chance for the artist to share their background and their favorite art piece! This is also where the artist can share their contact information and social media links. Testimonials are also added here for trustworthiness.
+
+<img src="documentation/feature_testing_images/about-page.png" alt="about-page" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/socials.png" alt="socials" style="width: 400px;">
+
+<hr>
+
+**Artwork Management Page** only accesible by admin and staff. Similar to the blog management page with a simple user interface to give a few details about the artwork. Easy access to updating or deleting a specific artwork. Staff and admin can add artwork from this page. The add product page is close to identical with the edit artwork page.
+
+<img src="documentation/feature_testing_images/artwork-management.png" alt="artwork-management" style="width: 400px;">
+
+<hr>
+
+**Profile Page** saves delivery information and order history for those who are registered users.
+
+<img src="documentation/feature_testing_images/my-profile-page.png" alt="profile-page" style="width: 400px;">
+
+<hr>
+
+**Sign up, login and sign out pages**
+
+<img src="documentation/feature_testing_images/sign-up.png" alt="sign-up" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/sign-in.png" alt="sign-in" style="width: 400px;">
+
+<img src="documentation/feature_testing_images/sign-out.png" alt="sign-out" style="width: 400px;">
+
+<hr>
+
+**Admin page** allows site owners to exercise administrative control over; users, orders, email addresses, artworks, categories.
+
+<img src="documentation/feature_testing_images/admin-page.png" alt="admin-page" style="width: 400px;">
+
+<hr>
+
+### Future Features to Implement
+- Search bar functionality.
+- Allowing the artist to edit their about page on the frontend.
+- Admin panel access to the blog functionality.
+- More SEO keywords throughout the website for higher SEO ranking.
+- More customizeable text input for comments on posts.
+- Contact form for customers to reach support.
+- An open forum for all registered users to share their artwork and ideas.
+- More social media implementations, such as login and share functionality to different social media platforms.
+<hr>
+
+## **CRUD Operations**
+
+| **Operations**                       | First Time Visitor | Auth. Users | Superusers |
+|--------------------------------------|--------------------|-------------|------------|
+| **View Home Page**                   | Yes                | Yes         | Yes        |
+| **View Artworks**                    | Yes                | Yes         | Yes        |
+| **View Blog Posts**                  | Yes                | Yes         | Yes        |
+| **Create Blog Posts**                | No                 | No          | Yes        |
+| **Update Blog Posts**                | No                 | No          | Yes        |
+| **Delete Blog Posts**                | No                 | No          | Yes        |
+| **Comment On Blog Posts**            | No                 | Yes         | Yes        |
+| **Manage Artworks (Add/Edit/Delete)**| No                 | No          | Yes        |
+| **Add Artworks to Cart**             | Yes                | Yes         | Yes        |
+| **Checkout**                         | Yes                | Yes         | Yes        |
+| **View/Update/Delete Profile**       | No                 | Yes         | Yes        |
+| **View Order History**               | No                 | Yes         | Yes        |
+| **Login**                            | Yes                | No          | No         |
+| **Register New User**                | Yes                | No          | No         |
+
+<hr>
+<hr>
 
 
 ## Technologies Used
+### Programming Languages
+   + [HTML5](https://en.wikipedia.org/wiki/HTML5)
+   + [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+   + [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+   + [Python](https://www.python.org/)
+
+### Support Programs & libraries
++ [Git](https://git-scm.com/)
+    - Version control.
++ [GitHub](https://github.com/)
+    - For storing code and deploying the site.
++ [Gitpod](https://www.gitpod.io/)
+    - Used for building and editing my code.
++ [Django](https://www.djangoproject.com/)
+    - A python based framework that was used to develop the site.
++ [Bootstrap](https://getbootstrap.com/)
+    - For help designing the html templates.
++ [Google Fonts](https://fonts.google.com/)
+    - Used to add style the website's font.
++ [Font Awesome](https://fontawesome.com/)
+    - Used to obtain the icons used.
++ [Favicon.io](https://favicon.io/emoji-favicons/amphora/)
+    - Used to generate the site's favicon.   
++ [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Used to help fix problem areas and identify bugs.
++ [AWS](http://aws.amazon.com/)
+    - Used to store static files and images.
++ [ElephantSQL](https://www.elephantsql.com/)
+    - Storage for the database
++ [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate HTML code.
++ [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate CSS code.
++ [Pep8ci](https://pep8ci.herokuapp.com/) - Thank you Code Institute
+    - Used to validate Python code found on slack #announcements
++ [JSHint](https://jshint.com/)
+    - Used to validate JS code.
++ [Heroku](https://www.heroku.com/)
+    - To deploy the project.
++ [Stripe](https://stripe.com/gb)
+    - Stripe is used to handle website payments.
 - Frameworks, Libraries, and Programs Used
 
 ## References and Credits
@@ -281,134 +505,69 @@ Please click [here](#) to view all the testing results mentioned above.
 - Additional Tutorials
 - Media and Content for Educational Purposes
 
-## Procedures
-- Prerequisites, Installs, IDE
-- Forking, Cloning, and Local Deployment of the Repository
-- Heroku App Creation
-- AWS S3 Bucket Creation
-- Stripe Configuration
+## Deployment Procedures
+
+This project was deployed using GitHub and Heroku.
+
+### GitHub
+
+1. Start a new repository.
+   - Log in to GitHub.
+   - Click the blue book icon.
+   - Choose a template (I used the Code Institute template as recommended).
+   - Add a repository name and click "Create repository" at the bottom of the page.
+   - Then, click the Gitpod button.
+
+### Gitpod and Django
+
+1. Install Django and other necessary libraries:
+   - Use `pip install Django` to install Django.
+   - Install any other required libraries.
+2. Write your code.
+3. Create a `.env` file for sensitive data and add it to the `.gitignore` file to prevent it from being publicly accessible.
+4. Generate a `requirements.txt` file by running `pip3 freeze --local > requirements.txt`.
+5. Create a `Procfile`.
+
+### Heroku
+
+1. Log in to Heroku.
+2. Click the "New" button, then select "New app".
+3. Choose a unique app name and region, then click "Create app".
+4. Go to "Settings" and click "Reveal Config Vars". Here, enter all the sensitive data, database addresses, and other URLs used in the project.
+5. Go back to the top and click on "Deploy", then select "GitHub".
+6. Scroll down and click on "Connect to GitHub".
+7. Search for your GitHub repository name by typing it in the search field.
+8. Click on "Connect".
+9. Scroll down and click on "Deploy Branch".
+10. Once the app is built with Python and all the dependencies, you'll see a message that says "The app was successfully deployed".
+11. Click on "View" to see the [deployed site](https://avtpepper-onestop-artist-shop.herokuapp.com/).
+
+### AWS S3 Bucket Creation
+
+1. Sign up for an Amazon Web Services (AWS) account if you haven't already.
+2. Navigate to the S3 service in the AWS Management Console.
+3. Click "Create bucket" and choose a unique name for your bucket.
+4. Select the appropriate region for your bucket and configure its settings as needed (e.g., enable public access, configure CORS, etc.).
+5. Create an IAM user with programmatic access and the necessary permissions for managing your S3 bucket.
+6. Save the IAM user's access key and secret access key, and add them as environment variables in your project and Heroku app.
+
+### Stripe Configuration
+
+1. Sign up for a Stripe account and log in.
+2. Navigate to the "Developers" section and click "API keys".
+3. Obtain your "Publishable key" and "Secret key" and add them as environment variables in your project and Heroku app.
+4. In your Django project, configure the Stripe settings (e.g., initialize the Stripe API with your API keys, set up webhooks, etc.).
+5. Test your Stripe integration using the provided test card numbers and ensure it's working as expected.
+
+By following these procedures, you should be able to successfully set up your development environment, deploy your app on Heroku, configure AWS S3 for media storage, and integrate Stripe for payments.
 
 
 
 
 
 
-# **Extra if Needed**
-## 2. Rationale
 
-Explain the rationale behind the development of the project, its purpose, and the value it provides to its users.
 
-## 3. UX
-
-### Project Scope
-
-Describe the project scope.
-
-### Strategy
-
-Explain the strategy for the project.
-
-### User Stories
-
-List user stories.
-
-## 4. Design
-
-### Website Structure
-
-Describe the structure of your website.
-
-### Wireframes
-
-Provide links or embed images of your wireframes.
-
-### Color
-
-Discuss the color scheme.
-
-### Fonts
-
-List the fonts used in the project.
-
-### Iconography
-
-Describe the iconography used in the project.
-
-## 5. Features
-
-### Existing Features
-
-List and describe the existing features.
-
-### Components
-
-Describe the main components of the project.
-
-### Future Features to Implement
-
-List and describe future features to implement.
-
-## 6. Data Schema
-
-Fully describe the data schema.
-
-## 7. Testing
-
-### Automated Testing
-
-Provide information on automated testing.
-
-### Bugs during Development
-
-#### Fixed Bugs
-
-List and describe the fixed bugs.
-
-#### Remaining Bugs
-
-List and describe the remaining bugs.
-
-## 8. Technologies and Libraries Used
-
-### Languages
-
-- Language 1
-- Language 2
-
-### Libraries and Other Resources
-
-- Library 1
-- Library 2
-
-## 9. Development and Deployment
-
-### Local Deployment
-
-Explain the local deployment process.
-
-### Deployment to Heroku
-
-Explain the Heroku deployment process.
-
-## 10. Version Control
-
-Discuss your git-based version control system and your approach to generating documentation.
-
-## 11. Usage
-
-Provide usage instructions.
-
-## 12. Contributing
-
-Explain how others can contribute to the project.
-
-## 13. License
-
-Provide license information.
-
-## 14. Contact
-
-Provide your contact information.
 
 ## 15. Credits
 
