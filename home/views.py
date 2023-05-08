@@ -31,9 +31,13 @@ def faq(request):
 def search(request):
     query = request.GET.get('q', '')
 
-    blog_posts = Post.objects.filter(Q(title__icontains=query) | Q(content__icontains=query))
-    artworks = Artwork.objects.filter(Q(name__icontains=query) | Q(description__icontains=query) | Q(category__name__icontains=query))
-
+    blog_posts = Post.objects.filter(
+        Q(title__icontains=query) | Q(content__icontains=query))
+    artworks = Artwork.objects.filter(
+        Q(name__icontains=query) |
+        Q(description__icontains=query) |
+        Q(category__name__icontains=query)
+    )
 
     context = {
         'blog_posts': blog_posts,

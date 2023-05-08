@@ -1,4 +1,4 @@
-{% load static %}
+{ % load static % }
 <!doctype html>
 <html lang="en">
 
@@ -123,13 +123,11 @@
     <div id="messages">
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }}" role="alert">
-
             <div class="spinner-border text-light spinner-border-sm" role="status">
                 <button type="button" class="close" aria-label="Close">
                     <span class="sr-only">Loading...</span>
                 </button>
             </div>
-
             <span class="countdown" style="display:none">10</span>
             {{ message }}
         </div>
@@ -149,9 +147,12 @@
             <div class="container">
                 <span class="mb-0">© 2023 Art Collection. All rights reserved.</span>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a target="_blank" href="https://www.privacypolicygenerator.info/live.php?token=GP0sc2S4DRDVgjOrZC9CGVPsrvRd2Unm">Privacy</a>
+                    <li class="list-inline-item"><a target="_blank"
+                            href="https://www.privacypolicygenerator.info/live.php?token=GP0sc2S4DRDVgjOrZC9CGVPsrvRd2Unm">Privacy</a>
                     </li>
-                    <li class="list-inline-item"><a href="{% url 'faq' %}">FAQ</a></li>
+                    <li class="list-inline-item">
+                        <a href="{% url 'faq' %}">FAQ</a>
+                    </li>
                 </ul>
             </div>
         </div>

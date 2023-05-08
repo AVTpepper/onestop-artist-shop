@@ -5,16 +5,21 @@ from django.contrib import admin
 from django.contrib import admin
 from .models import Post, Comment
 
+
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'created_at', 'updated_at', 'likes_count', 'comments_count')
+    list_display = (
+        'title', 'author', 'created_at',
+        'updated_at', 'likes_count', 'comments_count')
     search_fields = ('title', 'content', 'author__username')
     list_filter = ('author', 'created_at')
     date_hierarchy = 'created_at'
 
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('content_short', 'author', 'post', 'created_at', 'updated_at')
+    list_display = (
+        'content_short', 'author', 'post', 'created_at', 'updated_at')
     search_fields = ('content', 'author__username', 'post__title')
     list_filter = ('author', 'created_at', 'post')
     date_hierarchy = 'created_at'
