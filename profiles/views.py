@@ -28,10 +28,6 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
-    print("Orders: ", orders)
-    for order in orders:
-        print("Order number: ", order.order_number)
-        print("Line items: ", order.lineitems.all())
     template = 'profiles/profile.html'
     context = {
         'form': form,

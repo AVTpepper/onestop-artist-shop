@@ -81,7 +81,7 @@ def delete_artwork(request, artwork_id):
         return redirect('artwork_management')
     else:
         return redirect('artworks')
-    # return redirect('artworks')
+
 
 
 @permission_required('is_staff', raise_exception=True)
@@ -90,7 +90,7 @@ def artwork_management(request):
     A view for staff users to manage the artworks.
     """
     artworks = Artwork.objects.all()
-    print("Number of artworks", artworks.count())
+
     context = {'artworks': artworks}
     return render(request, 'artworks/artwork_management.html', context)
 

@@ -67,9 +67,6 @@ def remove_from_cart(request, artwork_id):
         artwork = get_object_or_404(Artwork, pk=artwork_id)
         cart = request.session.get('shopping_cart', {})
 
-        print(f"Cart before removing: {cart}")
-        print(f"Artwork ID to be removed: {artwork_id}")
-
         if str(artwork_id) in cart:
             cart.pop(str(artwork_id))
             messages.success(request, f'Removed {artwork.name} from your cart')
@@ -78,11 +75,9 @@ def remove_from_cart(request, artwork_id):
                 request, f'Artwork {artwork.name} is not in the cart'
             )
 
-        print(f"Cart after removing: {cart}")
         request.session['shopping_cart'] = cart
         request.session.modified = True
 
     except Exception as e:
-        print(f"Error: {e}")
         messages.error(request, f'Error removing item: {e}')
     return redirect('shopping_cart')

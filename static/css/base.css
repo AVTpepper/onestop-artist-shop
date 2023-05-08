@@ -41,13 +41,13 @@ body {
     position: absolute;
     right: 0;
     left: 0;
-    z-index: 9999; /* To ensure it appears above all other content */
-    pointer-events: none; /* To not interfere with clicks on underlying content */
+    z-index: 9999; 
+    pointer-events: none; 
     
 }
 
 #messages .alert {
-    pointer-events: auto; /* To allow interacting with the alert (for closing it, for example) */
+    pointer-events: auto; 
     margin: 0;
     text-align: center;
 }
@@ -59,6 +59,7 @@ body {
 @keyframes spinner-border {
     to { transform: rotate(360deg); }
 }
+
 /* Navbar */
 .dropdown-menu.dropdown-menu-right.show, .navbar {
     z-index: 999999999999;
@@ -195,8 +196,8 @@ footer a:hover {
 
 /* AllAuth form formatting */
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem; 
+    color: #6c757d; 
 }
 
 .allauth-form-inner-content input {
@@ -263,7 +264,7 @@ footer a:hover {
     border-color: var(--atomic-tangerine);
 }
 .allauth-form-inner-content a {
-    color: #17a2b8; /* text-info */
+    color: #17a2b8; 
 }
 
 

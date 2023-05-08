@@ -92,7 +92,7 @@ As an **administrator**, I can **manage newsletter subscriptions** so that I can
 | --- | --- | --- |
 | 1 | The backend should store and manage newsletter subscriber data | PASS |
 | 2 | The backend should integrate with an email marketing platform (e.g., Mailchimp, SendGrid) for sending newsletters | PASS |
-| 3 | Test the newsletter subscription functionality and integration | NOT TESTED |
+| 3 | Test the newsletter subscription functionality and integration | PASS |
 ------
 ### **Issue: Docstrings for functions and classes [#29](https://github.com/AVTpepper/onestop-artist-shop/issues/29)**
 
@@ -120,9 +120,9 @@ As a **visitor**, I can **search for specific artworks and products using keywor
 
 | **Test** | Issue | Result |
 | --- | --- | --- |
-| 1 | Users should be able to enter keywords into a search bar and receive relevant search results | NOT IMPLEMENTED |
-| 2 | Search results should display in a list or grid format, similar to the product listing page | NOT IMPLEMENTED |
-| 3 | The search functionality should be accessible from any page on the website | NOT IMPLEMENTED |
+| 1 | Users should be able to enter keywords into a search bar and receive relevant search results | PASS |
+| 2 | Search results should display in a list or grid format, similar to the product listing page | PASS |
+| 3 | The search functionality should be accessible from any page on the website | PASS |
 ------
 ### **Issue 9: Order Processing and Management [#20](https://github.com/AVTpepper/onestop-artist-shop/issues/20)**
 

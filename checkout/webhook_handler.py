@@ -5,7 +5,7 @@ from django.conf import settings
 
 from .models import Order, OrderLineItem
 from artworks.models import Artwork
-# from profiles.models import UserProfile
+
 
 import json
 import time
@@ -46,7 +46,6 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
-        print('Handling payment_intent.succeeded event')
         intent = event.data.object
         pid = intent.id
         shopping_cart = json.loads(intent.metadata['shopping_cart'])
@@ -161,7 +160,6 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.payment_failed webhook from Stripe
         """
-        print('Handling payment_intent.payment_failed event')
         payment_intent = event.data.object
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
