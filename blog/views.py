@@ -201,7 +201,7 @@ def post_delete(request, pk):
         'post': post,
     }
 
-    return render(request, 'blog/post_delete.html', context)
+    return redirect('post_management')
 
 
 @user_passes_test(is_staff, login_url='/blog/')
