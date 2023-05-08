@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="serach-page-header mb-4">Search Results for "{{ query }}"</h1>
+
+    <div class="card  mb-4">
+        <div class="card-header search-card-header">
+            <h2 class="serach-page-header">Blog Posts</h2>
+        </div>
+        <div class="card-body card-color">
+            {% for blog_post in blog_posts %}
+            <div class="card mb-4">
+                <div class="card-body hover-border">
+                    <h3 class="card-title"><a class="result-text" href="{% url 'post_detail' blog_post.pk %}">{{ blog_post.title }}</a>
+                    </h3>
+                    <p class="card-text">{{ blog_post.content|truncatewords:30 }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-muted">No blog posts found.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="card bg-light mb-4">
+        <div class="card-header search-card-header">
+            <h2 class="serach-page-header">Artworks</h2>
+        </div>
+        <div class="card-body card-color">
+            {% for artwork in artworks %}
+            <div class="card mb-4 ">
+                <div class="card-body hover-border">
+                    <h3 class="card-title"><a class="result-text" href="{% url 'artwork_detail' artwork_id=artwork.pk %}">{{ artwork.name }}</a></h3>
+                    <p class="card-text">{{ artwork.description|truncatewords:30 }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-muted">No artworks found.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
