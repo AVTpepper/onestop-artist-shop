@@ -103,3 +103,31 @@ a:hover {
 .max-image-measurements {
     max-height: 55vh !important;
 }
+
+.search-card-header {
+    background-color: var(--ash-gray);
+}
+
+.serach-page-header {
+    color: var(--dark-purple);
+}
+
+.result-text {
+    color: var(--dark-purple)
+}
+
+.result-text:hover {
+    color: var(--atomic-tangerine);
+}
+
+.card-color {
+    background-color: var(--white-smoke)
+}
+
+.hover-border {
+    border: 2px solid;
+}
+
+.hover-border:hover {
+    border: 2px solid var(--atomic-tangerine);
+}
