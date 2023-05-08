@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<!-- Add any custom CSS or dependencies here -->
+<link rel="stylesheet" type="text/css" href="{% static 'artworks/css/artworks.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -42,19 +42,19 @@
                         <!-- Delete Confirmation Modal -->
                         <div class="modal fade" id="deleteModal{{ artwork.pk }}" tabindex="-1"
                             aria-labelledby="deleteModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-delete">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="deleteModalLabel">Delete Artwork</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
                                     <div class="modal-body">
                                         Are you sure you want to delete the artwork "{{ artwork.name }}"?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cancel</button>
+                                            data-dismiss="modal">Cancel</button>
                                         <a href="{% url 'delete_artwork' artwork.pk %}"
                                             class="btn btn-danger">Delete</a>
                                     </div>
