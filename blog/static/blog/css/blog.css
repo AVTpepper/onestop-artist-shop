@@ -2,8 +2,10 @@ textarea#id_content {
     height: 100px;
 }
 
-.max-image-height{
+.max-image-measurements {
     max-height: 40vh;
+    object-fit: contain;
+    max-width: 100%;
 }
 
 .modal-dialog {

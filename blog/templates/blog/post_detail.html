@@ -15,11 +15,11 @@
         {% endif %}
         <div class="card mt-4">
             <div class="card-body">
-                {% if artwork.image %}
-                <img src="{{ artwork.image.url }}" class="image-fluid" alt="{{ artwork.name }}">
+                {% if post.image %}
+                <img src="{{ post.image.url }}" class="image-fluid max-image-measurements" alt="{{ artwork.name }}">
                 {% else %}
                 <!-- default image  -->
-                <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid" alt="{{ artwork.name }}">
+                <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid max-image-measurements" alt="{{ artwork.name }}">
                 {% endif %}
                 <h5 class="card-title">{{ post.title }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{ post.author }} | {{ post.published_date }}</h6>

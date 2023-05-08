@@ -16,10 +16,10 @@
         <div class="row no-gutters">
             <div class="col-md-4 d-flex justify-content-center">
                 {% if post.image %}
-                    <img src="{{ post.image.url }}" class="image-fluid max-image-height" alt="post-image">
+                    <img src="{{ post.image.url }}" class="image-fluid max-image-measurements" alt="post-image">
                     {% else %}
                     <!-- default image  -->
-                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid max-image-height" alt="post-image">
+                    <img src="{{ MEDIA_URL }}noimage.png" class="image-fluid max-image-measurements" alt="post-image">
                     {% endif %}
             </div>
             <div class="col-md-8">
