@@ -1,4 +1,4 @@
-{ % load static % }
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -46,7 +46,7 @@
 
     <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
-
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
     {% block extra_js %}
     {% endblock %}
 
