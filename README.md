@@ -1,5 +1,5 @@
 # **OneStop Artist Shop**
-![am-i-responsive](#)
+![am-i-responsive](/documentation/readme_images/am_i_responsive.png)
 ## **Introduction**
 
 OneStop Artist Shop is an online marketplace platform designed for an artist to showcase and sell their artwork. It allows the artist to create their own listings and sell their art pieces. Visitors can browse for artwork using a category filter method. The users can register for the website, and gain access to further features such saving their delivery information, leaving comments and likes on blogs, signing up for a newsletter. It also contains a blog feature where staff can publish blog posts.
@@ -271,7 +271,7 @@ There have been several coding challenges under the entirety of the project. How
 * Each feature of the application was tested to ensure that it functioned correctly and met the project requirements. This included testing forms, navigation, and user authentication.
 
 ### Testing document
-Please click [here](#) to view all the testing results mentioned above.
+Please click [here](/documentation/testing_docs/testing_results.md) to view all the testing results mentioned above.
 <hr>
 
 ## **App Features**
