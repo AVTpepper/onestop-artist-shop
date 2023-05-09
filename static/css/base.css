@@ -18,6 +18,11 @@ html {
     height: 100%;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     background-color: rgba(247,162,120,0.3);
     display: flex;
