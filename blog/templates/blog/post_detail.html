@@ -23,7 +23,7 @@
                         alt="{{ artwork.name }}">
                     {% endif %}
                     <h5 class="card-title">{{ post.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ post.author }} | {{ post.published_date }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ post.author }} | {{ post.created_at }}</h6>
                     <p class="card-text">{{ post.content }}</p>
                     <p>
                     <form method="post" action="{% url 'like_post' post.id %}">
