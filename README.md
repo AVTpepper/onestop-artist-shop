@@ -16,6 +16,7 @@ OneStop Artist Shop is an online marketplace platform designed for an artist to 
 5. [Database Design](#database-design)
 6. [Marketing](#marketing)
 7. [User Stories](#user-stories)
+7. [Agile Development](#agile-development)
 8. [Manual Testing](#manual-testing)
 9. [Automatic Testing](#automatic-testing)
 10. [Testing Document](#testing-document)
@@ -224,6 +225,16 @@ User stories are based on four types of users: anonymous users, buyer users, sel
 Milestones, Issues, User Stories, Tasks, and Acceptance Criteria can be found in the [GitHub repository project Kanban board](https://github.com/users/AVTpepper/projects/5).
 <hr>
 
+## **Agile Development
+During the development of this project, I employed Agile development practices to ensure a flexible and iterative approach to the project's progress. The Agile methodology enabled me to rapidly adapt to changing requirements and efficiently manage the development process.
+
+I utilized a Kanban board to manage and visualize the workflow. The board was filled with issues, user stories, tasks, and acceptance criteria that guided the development process. Each issue represented a specific feature, bug, or improvement, which helped me in prioritizing tasks and maintaining focus on the most pressing items.
+
+To further enhance organization and planning, I assigned each issue to a milestone. This allowed me to break down the project into smaller, manageable phases, ensuring a steady and organized progression towards the completion of the project. By following Agile development practices and employing tools such as the Kanban board and milestones, I was able to deliver a high-quality application while maintaining adaptability and responsiveness to project requirements.
+
+However, as this was my first implementation of agile development in a project it didnt turn out to work perfectly without challenges and adjustions. I didnt create specific enough isssues to follow my development. For my next project I will need to make a better step for step plan of what to develop, and when to develop them. I also want to learn how to make pull requests to isses so the code implemeneted each step of the way can be tracked to an issue.
+ <hr>
+
 ## **Manual Testing**
 
 ### **Responsiveness Testing**
@@ -275,6 +286,7 @@ There have been several coding challenges under the entirety of the project. How
 * Each feature of the application was tested to ensure that it functioned correctly and met the project requirements. This included testing forms, navigation, and user authentication.
 
 ## **Automatic Testing**
+In the development of the artworks app, I attempted to implement automatic testing for the models to ensure their robustness and reliability. I conducted research on various testing methodologies and best practices for implementing automated tests in Django. However, due to time constraints, I was unable to fully integrate automated testing into the project and resorted to manual testing for the time being. I understand the significance of automated testing in ensuring the quality and stability of the application, and I plan to prioritize its implementation in future development to maintain a high standard of code quality and reliability.
 
 ## **Testing document**
 Please click [here](/documentation/testing_docs/testing_results.md) to view all the testing results mentioned above.
