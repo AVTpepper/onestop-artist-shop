@@ -4,7 +4,7 @@
 
 OneStop Artist Shop is an online marketplace platform designed for an artist to showcase and sell their artwork. It allows the artist to create their own listings and sell their art pieces. Visitors can browse for artwork using a category filter method. The users can register for the website, and gain access to further features such saving their delivery information, leaving comments and likes on blogs, signing up for a newsletter. It also contains a blog feature where staff can publish blog posts.
 
-* Live website deployment can be found [here](https://avtpepper-onestop-artist-shop.herokuapp.com/).
+* Live website is not available anymore due to not having an active hosting platform.
 
 
 ## **Table of Contents**
